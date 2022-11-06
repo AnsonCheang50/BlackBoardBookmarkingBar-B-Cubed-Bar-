@@ -1,4 +1,4 @@
-Authors: Shane Calla, Seattle Bourassa, Arthur Rosa
+Authors: Shane Calla, Seattle Bourassa, Arthur Rosa, Anson Cheang
 
 
 
