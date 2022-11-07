@@ -4,7 +4,7 @@
     height: 150px;
 }
 
-img{
+#logo{
     background-color: white;
     padding: 5px;
     margin-left: 10px;
@@ -13,10 +13,6 @@ img{
 #fi{
     width: 110px
     
-}
-
-tr{
-    height: 150px;
 }
 
 h1{
@@ -99,4 +95,36 @@ h2{
     font-weight: bold;
     font-size: medium;
     text-decoration: none;
+}
+
+#middle{
+    height: 50px;
+}
+
+#classname{
+    font-weight: bold;
+}
+
+#arrow{
+    margin-left: 10px;
+}
+
+#sidebar{
+    background-color: rgb(42,39,39);
+    color: white;
+    text-align: center;
+    display: inline-block;
+}
+
+#im{
+    text-align: right;
+}
+#content{
+    display: inline-block;
+}
+#resource{
+    border-style: double;
+}
+#bottom{
+    display: inline-block;
 }
