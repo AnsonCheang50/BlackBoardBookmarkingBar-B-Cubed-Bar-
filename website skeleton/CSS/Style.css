@@ -1,3 +1,5 @@
+/* div."class" same as #"id" */
+
 #header{
     background-color: rgb(6, 97, 171);
     color: white;
@@ -15,7 +17,7 @@
     
 }
 
-div.content{
+div.bookmarkbar{
     position: static;
     top: 5px;
     left: 220px;
@@ -138,4 +140,12 @@ h2{
 }
 #bottom{
     display: inline-block;
+}
+
+div.content{
+    border: 2px solid black;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    padding: 5px;
 }
