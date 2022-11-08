@@ -1,7 +1,5 @@
 Authors: Shane Calla, Seattle Bourassa, Arthur Rosa, Anson Cheang
 
-
-
 # BBBB-BlackBoardBookmarkingBar-B-Cubed-Bar-
 
 
