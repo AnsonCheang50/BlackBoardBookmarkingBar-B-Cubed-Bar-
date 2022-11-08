@@ -15,8 +15,15 @@
     
 }
 
-#bbbb{
-    
+div.content{
+    position: static;
+    top: 5px;
+    left: 220px;
+    right: 0;
+    width: auto;
+    line-height: 1.3em;
+    padding-right: 0.5em;
+    border: black;
 }
 
 h1{
