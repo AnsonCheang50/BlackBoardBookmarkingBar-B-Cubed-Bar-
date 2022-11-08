@@ -22,21 +22,24 @@
 
 div.bookmarkbar{
     position: static;
-    top: 5px;
-    left: 220px;
-    right: 0;
     width: auto;
     line-height: 1.3em;
-    padding-right: 0.5em;
     border: black;
     background-color: rgb(6, 97, 171);
+
 }
 
-#blackline{
+#topblackline{
     position: static; 
     border-top: 1px solid black;
     border: 1px solid black;
     
+}
+
+#bottomblackline {
+    position: static; 
+    border-top: 1px solid black;
+    border: 1px solid black;
 }
 
 
