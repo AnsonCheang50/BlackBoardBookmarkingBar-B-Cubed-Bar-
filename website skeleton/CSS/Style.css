@@ -15,7 +15,10 @@
     
 }
 
-div.content{
+
+
+
+div.bookmarkbar{
     position: static;
     top: 5px;
     left: 220px;
@@ -24,7 +27,16 @@ div.content{
     line-height: 1.3em;
     padding-right: 0.5em;
     border: black;
+    background-color: rgb(6, 97, 171);
 }
+
+#blackline{
+    position: static; 
+    border-top: 1px solid black;
+    border: 1px solid black;
+    
+}
+
 
 h1{
     padding: 0px;
