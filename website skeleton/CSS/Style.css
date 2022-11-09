@@ -1,3 +1,5 @@
+/* div."class" same as #"id" */
+
 #header{
     background-color: rgb(6, 97, 171);
     color: white;
@@ -12,6 +14,23 @@
 
 #fi{
     width: 110px
+    
+}
+
+div.bookmarkbar{
+    color: white;
+    position: static;
+    background-color: rgb(6, 97, 171);
+}
+
+#blackline{
+    position: static; 
+    border-top: 1px solid black;
+    border: 1px solid black;
+}
+
+div.class{
+    width: 350px;
     
 }
 
@@ -127,4 +146,32 @@ h2{
 }
 #bottom{
     display: inline-block;
+}
+
+div.background{
+    background-color: #f8f8f8;
+    border: solid green;
+}
+
+div.headerbox{
+    background-color: #f8f8f8;
+    color: black;
+    padding: 5px;
+    width: 350px;
+    position:relative;
+    left: 20px;
+    top: 20px;
+    border-top: solid gray;
+    border-left: solid gray;
+    border-right: inset gray;
+   
+}
+
+div.content{
+    border: solid gray;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    padding: 5px;
+    width: 350px;
 }
