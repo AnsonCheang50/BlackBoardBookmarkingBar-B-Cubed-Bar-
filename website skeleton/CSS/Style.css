@@ -132,12 +132,11 @@ h2{
     margin-left: 10px;
 }
 
-#sidebar{
-    background-color: rgb(42,39,39);
-    color: white;
-    text-align: center;
-    display: inline-block;
+#menu{
+    white-space: nowrap; /*text doesn't wrap*/
 }
+
+
 
 #im{
     text-align: right;
@@ -148,8 +147,42 @@ h2{
 #resource{
     border-style: double;
 }
-#bottom{
-    display: inline-block;
+
+
+#globalNavPage {
+    overflow: visible;
+    height: 654px;
+}
+#sidebar{
+    
+    background-color: rgb(42,39,39);
+    color: white;
+    text-align: center;
+    float: left;
+    position: relative;
+    
+    
+    
+
+
+}
+
+#sidebar-inner {
+    min-height: 100%;
+    height: auto;
+}
+
+#course-homepage {
+    list-style: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
 }
 
 div.background{
@@ -173,9 +206,6 @@ div.headerbox{
 
 div.content{
     border: solid gray;
-    position: relative;
-    top: 20px;
-    left: 20px;
     padding: 5px;
-    width: 350px;
+    margin-left: 50%;
 }
