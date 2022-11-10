@@ -20,7 +20,15 @@
 #bookmarkbar{
     color: white;
     position: static;
+    top: 5px;
+    left: 220px;
+    right: 0;
+    width: auto;
+    line-height: 1.3em;
+    padding-right: 0.5em;
+    border: black;
     background-color: rgb(6, 97, 171);
+
 }
 
 #blackline{
@@ -33,6 +41,7 @@ div.class{
     width: 350px;
     
 }
+
 
 h1{
     padding: 0px;
@@ -128,26 +137,55 @@ h2{
     margin-left: 10px;
 }
 
-#sidebar{
-    background-color: rgb(42,39,39);
-    color: white;
-    text-align: center;
-    display: inline-block;
+#menu{
+    white-space: nowrap; /*text doesn't wrap*/
 }
+
+
 
 #im{
     text-align: right;
 }
-#content{
-    display: inline-block;
-}
+
 #resource{
     border-style: double;
     min-width: 100%;
 }
+
 #bottom{
     display: inline-block;
     min-width: 100%;
+
+
+
+
+#globalNavPage {
+    overflow: visible;
+    height: 654px;
+}
+#sidebar{
+    background-color: rgb(42,39,39);
+    color: white;
+    float: left;
+    text-align: center;
+}
+
+#sidebar-inner {
+    min-height: 100%;
+    height: auto;
+}
+
+#course-homepage {
+    list-style: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
 }
 
 div.background{
