@@ -31,10 +31,15 @@ div.bookmarkbar{
 
 }
 
-#topblackline{
+#blackline{
     position: static; 
     border-top: 1px solid black;
     border: 1px solid black;
+}
+
+div.class{
+    width: 350px;
+    
 }
 
 
@@ -141,12 +146,12 @@ h2{
 #im{
     text-align: right;
 }
-#content{
-    display: inline-block;
-}
+
 #resource{
     border-style: double;
 }
+
+
 
 
 #globalNavPage {
@@ -154,17 +159,10 @@ h2{
     height: 654px;
 }
 #sidebar{
-    
     background-color: rgb(42,39,39);
     color: white;
-    text-align: center;
     float: left;
-    position: relative;
-    
-    
-    
-
-
+    text-align: center;
 }
 
 #sidebar-inner {
@@ -206,6 +204,9 @@ div.headerbox{
 
 div.content{
     border: solid gray;
+    position: relative;
+    top: 20px;
+    left: 20px;
     padding: 5px;
-    margin-left: 50%;
+    width: 350px;
 }
