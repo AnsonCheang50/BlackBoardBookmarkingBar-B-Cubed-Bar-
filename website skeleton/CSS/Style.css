@@ -17,7 +17,7 @@
     
 }
 
-#bookmarkbar{
+div.bookmarkbar{
     color: white;
     position: static;
     top: 5px;
@@ -149,12 +149,7 @@ h2{
 
 #resource{
     border-style: double;
-    min-width: 100%;
 }
-
-#bottom{
-    display: inline-block;
-    min-width: 100%;
 
 
 
