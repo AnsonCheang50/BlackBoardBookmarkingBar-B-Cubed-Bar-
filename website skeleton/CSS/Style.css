@@ -17,7 +17,7 @@
     
 }
 
-div.bookmarkbar{
+#bookmarkbar{
     color: white;
     position: static;
     background-color: rgb(6, 97, 171);
@@ -143,9 +143,11 @@ h2{
 }
 #resource{
     border-style: double;
+    min-width: 100%;
 }
 #bottom{
     display: inline-block;
+    min-width: 100%;
 }
 
 div.background{
