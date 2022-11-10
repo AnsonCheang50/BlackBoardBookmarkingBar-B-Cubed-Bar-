@@ -152,8 +152,27 @@ h2{
     display: inline-block;
 }
 
+div.background{
+    background-color: #f8f8f8;
+    border: solid green;
+}
+
+div.headerbox{
+    background-color: #f8f8f8;
+    color: black;
+    padding: 5px;
+    width: 350px;
+    position:relative;
+    left: 20px;
+    top: 20px;
+    border-top: solid gray;
+    border-left: solid gray;
+    border-right: inset gray;
+   
+}
+
 div.content{
-    border: 2px solid black;
+    border: solid gray;
     position: relative;
     top: 20px;
     left: 20px;
