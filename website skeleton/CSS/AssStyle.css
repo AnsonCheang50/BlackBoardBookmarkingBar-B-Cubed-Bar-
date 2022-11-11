@@ -2,7 +2,7 @@
 
 #header{
     background-color: rgb(6, 97, 171);
-    color: white;
+    color: black;
     height: 150px;
 }
 
@@ -10,6 +10,32 @@
     background-color: white;
     padding: 5px;
     margin-left: 10px;
+}
+
+/*BlackBoard Title*/
+h1{
+    color: white;
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+h2{
+    color: white;
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*Horizontal Rule*/
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
 }
 
 #fi{
