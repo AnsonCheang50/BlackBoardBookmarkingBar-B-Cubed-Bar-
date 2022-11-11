@@ -123,8 +123,12 @@ div.bookmarkbar{
 /*Body*/
 div.background{
     background-color: #f8f8f8;
-    border: solid green;
+    border: solid rgba(168, 165, 165, 0.791);
     padding: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 /*Boxes*/
