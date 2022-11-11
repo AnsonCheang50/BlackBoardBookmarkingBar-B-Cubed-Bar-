@@ -1,55 +1,23 @@
 /* div."class" same as #"id" */
 
+/*Top of page*/
 #header{
     background-color: rgb(6, 97, 171);
     color: white;
     height: 150px;
 }
-
-#logo{
-    background-color: white;
-    padding: 5px;
-    margin-left: 10px;
-}
-
 #fi{
     width: 110px
     
 }
 
-div.bookmarkbar{
-    color: white;
-    position: static;
-    top: 5px;
-    left: 220px;
-    right: 0;
-    width: auto;
-    line-height: 1.3em;
-    padding-right: 0.5em;
-    border: black;
-    background-color: rgb(6, 97, 171);
-
-}
-
-#blackline{
-    position: static; 
-    border-top: 1px solid black;
-    border: 1px solid black;
-}
-
-div.class{
-    width: 350px;
-    
-}
-
-
+/*BlackBoard Title*/
 h1{
     padding: 0px;
     border: 0px;
     margin: 0px;
     font-family: 'Times New Roman', Times, serif;
 }
-
 h2{
     padding: 0px;
     border: 0px;
@@ -57,13 +25,23 @@ h2{
     font-family: 'Times New Roman', Times, serif;
 }
 
+/*Horizontal Rule*/
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*Dropdown Box*/
 #silo{
     background-color: rgb(97, 97, 97);
     margin-left: 0px;
     padding: 0px;
     margin: 5px;
 }
-
 .dropbtn {
     background-color: rgb(97, 97, 97);
     color: white;
@@ -73,16 +51,13 @@ h2{
     cursor: pointer;
     text-align: left;
 }
-
 .dropbtn:hover, .dropbtn:focus {
     background-color: rgb(97, 97, 97);
 }
-
 .dropdown {
   position: relative;
   display: inline-block;
 }
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -92,14 +67,12 @@ h2{
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
-
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
-
 .dropdown a:hover {background-color: #ddd;}
 
 .show {display: block;}
@@ -114,21 +87,79 @@ h2{
     display: inline-block;
 }
 
+/* Power Button
 #power{
     padding: 0px;
-}
+} */
 
-#home{
+/*Course Center*/
+#coursecenter{
     color: white;
     font-weight: bold;
     font-size: medium;
     text-decoration: none;
 }
 
-#middle{
-    height: 50px;
+/*Bookmark Bar*/
+div.bookmarkbar{
+    color: white;
+    position: static;
+    top: 5px;
+    left: 220px;
+    right: 0;
+    width: auto;
+    line-height: 1.3em;
+    padding-right: 0.5em;
+    border: black;
+    background-color: rgb(6, 97, 171);
+
+}
+#blackline{
+    position: static; 
+    border-top: 1px solid black;
+    border: 1px solid black;
 }
 
+/*Body*/
+div.background{
+    background-color: #f8f8f8;
+    border: solid green;
+    padding: 10px;
+}
+
+/*Boxes*/
+div.headerbox{
+    background-color: #f8f8f8;
+    color: black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    width: 375px;
+    position:relative;
+    left: 20px;
+    top: 20px;
+    border-top: solid gray;
+    border-left: solid gray;
+    border-right: inset gray;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+div.content{
+    border: solid gray;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    padding: 5px;
+    width: 375px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+/*QUESTIONS FOR ANSON*/
+
+/* #middle{
+    height: 50px;
+}
 #classname{
     font-weight: bold;
 }
@@ -138,75 +169,22 @@ h2{
 }
 
 #menu{
-    white-space: nowrap; /*text doesn't wrap*/
-}
-
-
-
+    white-space: nowrap; text doesn't wrap
 #im{
     text-align: right;
 }
-
+    
 #resource{
     border-style: double;
 }
-
-
-
-
+div.class{
+    width: 350px;
+    
+} 
 #globalNavPage {
     overflow: visible;
     height: 654px;
 }
-#sidebar{
-    background-color: rgb(42,39,39);
-    color: white;
-    float: left;
-    text-align: center;
-}
-
-#sidebar-inner {
-    min-height: 100%;
-    height: auto;
-}
-
 #course-homepage {
     list-style: none;
-}
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-div.background{
-    background-color: #f8f8f8;
-    border: solid green;
-}
-
-div.headerbox{
-    background-color: #f8f8f8;
-    color: black;
-    padding: 5px;
-    width: 350px;
-    position:relative;
-    left: 20px;
-    top: 20px;
-    border-top: solid gray;
-    border-left: solid gray;
-    border-right: inset gray;
-   
-}
-
-div.content{
-    border: solid gray;
-    position: relative;
-    top: 20px;
-    left: 20px;
-    padding: 5px;
-    width: 350px;
-}
+}*/
