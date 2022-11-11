@@ -146,6 +146,7 @@ div.content{
     padding: 5px;
     width: 350px;
 }
+th{resize:horizontal; overflow:auto;}
 
 
 /*QUESTIONS FOR ANSON*/
