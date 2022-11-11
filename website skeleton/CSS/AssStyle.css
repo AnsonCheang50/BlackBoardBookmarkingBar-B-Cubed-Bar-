@@ -2,7 +2,7 @@
 
 #header{
     background-color: rgb(6, 97, 171);
-    color: white;
+    color: black;
     height: 150px;
 }
 
@@ -10,6 +10,32 @@
     background-color: white;
     padding: 5px;
     margin-left: 10px;
+}
+
+/*BlackBoard Title*/
+h1{
+    color: white;
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+h2{
+    color: white;
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*Horizontal Rule*/
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
 }
 
 #fi{
@@ -37,10 +63,7 @@ div.bookmarkbar{
     border: 1px solid black;
 }
 
-div.class{
-    width: 350px;
-    
-}
+
 
 
 h1{
@@ -114,9 +137,7 @@ h2{
     display: inline-block;
 }
 
-#power{
-    padding: 0px;
-}
+
 
 #home{
     color: white;
@@ -125,39 +146,25 @@ h2{
     text-decoration: none;
 }
 
+
+
 #middle{
     height: 50px;
 }
-
-#classname{
-    font-weight: bold;
-}
-
 #arrow{
     margin-left: 10px;
 }
 
 #menu{
-    white-space: nowrap; /*text doesn't wrap*/
+    overflow-wrap: break-word; /*text doesn't wrap*/
+    inline-size: 150px;
+}
+
+#class-homepage {
+    text-align: left;
 }
 
 
-
-#im{
-    text-align: right;
-}
-
-#resource{
-    border-style: double;
-}
-
-
-
-
-#globalNavPage {
-    overflow: visible;
-    height: 654px;
-}
 #sidebar{
     background-color: rgb(42,39,39);
     color: white;
@@ -170,9 +177,6 @@ h2{
     height: auto;
 }
 
-#course-homepage {
-    list-style: none;
-}
 
 hr {
     display: block;
@@ -183,30 +187,56 @@ hr {
     padding: 0;
 }
 
-div.background{
-    background-color: #f8f8f8;
-    border: solid green;
+
+
+
+/*    Stuff I added     */
+
+
+div.infomationData {
+    display: table-cell;
+    border: 1px solid #ddd;
+    padding: 9px 18px;
+    vertical-align: top;
+    width: 33%;
+    white-space: nowrap;
+
 }
 
-div.headerbox{
-    background-color: #f8f8f8;
-    color: black;
-    padding: 5px;
-    width: 350px;
-    position:relative;
-    left: 20px;
-    top: 20px;
-    border-top: solid gray;
-    border-left: solid gray;
-    border-right: inset gray;
-   
+#timeData {
+    display: table-cell;
+    border: 1px solid #ddd;
+    padding: 9px 18px;
+    vertical-align: top;
+    width: 33%;
+    white-space: nowrap;
 }
 
-div.content{
-    border: solid gray;
-    position: relative;
-    top: 20px;
-    left: 20px;
-    padding: 5px;
-    width: 350px;
+#pointData {
+    display: table-cell;
+    border: 1px solid #ddd;
+    padding: 9px 18px;
+    width: 33%;
+    white-space: nowrap;
 }
+
+div.Label {
+    color: #777777;
+    padding: 0 0 6px;
+    text-align: center;
+}
+
+span.SubInfo {
+    display: block;
+    margin: 6px 0 0;
+    font-size: 89.1%;
+    font-weight: normal;
+    color: #777;
+}
+
+div.InfoField {
+    font-size: 112.2%;
+    font-weight: bold;
+    text-align: center;
+}
+

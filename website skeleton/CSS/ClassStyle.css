@@ -138,7 +138,7 @@ h2{
 }
 
 #menu{
-    white-space: nowrap; /*text doesn't wrap*/
+   
 }
 
 
@@ -163,6 +163,7 @@ h2{
     color: white;
     float: left;
     text-align: center;
+    height: 100%;
 }
 
 #sidebar-inner {
