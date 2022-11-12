@@ -148,9 +148,7 @@ div.headerbox{
     position:relative;
     border-top: solid #ddd;
     border-left: solid #ddd;
-    border-right: inset #ddd;
-    margin-left: 10px;
-    margin-right: 10px;
+    border-right: solid #ddd;
 }
 div.content{
     background-color: white;
@@ -158,13 +156,23 @@ div.content{
     position: relative;
     padding: 5px;
     width: 375px;
-    margin-left: 10px;
-    margin-right: 10px;
+    
 }
 #courses{
     width: 450px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
-td.column1{
+#aboutus{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#resources{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* td.column1{
     background-color: red;
 }
 td.column2{
@@ -172,7 +180,7 @@ td.column2{
 }
 td.column3{
     background-color: blue;
-}
+} */
 
 
 
