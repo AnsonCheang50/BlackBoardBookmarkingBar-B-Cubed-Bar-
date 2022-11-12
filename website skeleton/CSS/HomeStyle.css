@@ -127,8 +127,10 @@ body{
 div.background{
     background-color: #f8f8f8;
     border: solid #ddd;
-    /* padding-left: 10%;
-    padding-right: 10%; */
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
     margin-left: 25px;
     margin-right: 25px;
     margin-top: 15px;
@@ -147,17 +149,36 @@ div.headerbox{
     border-top: solid #ddd;
     border-left: solid #ddd;
     border-right: inset #ddd;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 div.content{
+    background-color: white;
     border: solid #ddd;
     position: relative;
     padding: 5px;
     width: 375px;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
+#courses{
+    width: 450px;
+}
+td.column1{
+    background-color: red;
+}
+td.column2{
+    background-color: green;
+}
+td.column3{
+    background-color: blue;
+}
+
+
+
+
+
+
 
 /*QUESTIONS FOR ANSON*/
 
