@@ -121,10 +121,14 @@ div.bookmarkbar{
 }
 
 /*Body*/
+body{
+    background-color: #f8f8f8;
+}
 div.background{
     background-color: #f8f8f8;
     border: solid #ddd;
-    padding: 10px;
+    /* padding-left: 10%;
+    padding-right: 10%; */
     margin-left: 25px;
     margin-right: 25px;
     margin-top: 15px;
@@ -140,8 +144,6 @@ div.headerbox{
     padding-left: 10px;
     width: 375px;
     position:relative;
-    left: 20px;
-    top: 20px;
     border-top: solid #ddd;
     border-left: solid #ddd;
     border-right: inset #ddd;
@@ -151,8 +153,6 @@ div.headerbox{
 div.content{
     border: solid #ddd;
     position: relative;
-    top: 20px;
-    left: 20px;
     padding: 5px;
     width: 375px;
     margin-left: 30px;
