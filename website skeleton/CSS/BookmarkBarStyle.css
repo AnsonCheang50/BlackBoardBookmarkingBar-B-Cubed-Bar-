@@ -1,0 +1,48 @@
+div.top-navigation {
+    position: relative;
+    z-index: 1;
+}
+
+/* Style the navbar */
+#bookmarkbar {
+    overflow: hidden;
+    width: auto;
+    line-height: 1.3em;
+    padding-right: 0.5em;
+    border: black;
+    background-color: rgb(6, 97, 171);
+}
+
+#bookmarkbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#bookmarkbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#bookmarkbar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: auto;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
