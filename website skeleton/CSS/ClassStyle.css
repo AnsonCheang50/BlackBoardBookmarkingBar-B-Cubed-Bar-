@@ -1,5 +1,9 @@
 /* div."class" same as #"id" */
 
+boday{
+    background-color: rgb(6, 97, 171);;
+}
+
 #header{
     background-color: rgb(6, 97, 171);
     color: white;

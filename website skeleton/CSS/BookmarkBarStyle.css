@@ -11,6 +11,7 @@ div.top-navigation {
     padding-right: 0.5em;
     border: black;
     background-color: rgb(6, 97, 171);
+    width: 100%;
 }
 
 #bookmarkbar a {
