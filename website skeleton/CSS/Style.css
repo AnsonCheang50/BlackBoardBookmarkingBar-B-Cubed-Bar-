@@ -17,18 +17,17 @@
     
 }
 
-div.bookmarkbar{
-    color: white;
-    position: static;
-    top: 5px;
-    left: 220px;
-    right: 0;
-    width: auto;
-    line-height: 1.3em;
-    padding-right: 0.5em;
-    border: black;
-    background-color: rgb(6, 97, 171);
 
+
+
+#blackline{
+    position: static; 
+    border-top: 1px solid black;
+    border: 1px solid black;
+}
+
+div.class{
+    width: 350px; 
 }
 
 #blackline{
@@ -201,12 +200,12 @@ div.headerbox{
     border-right: inset gray;
    
 }
-
+/*
 div.content{
     border: solid gray;
     position: relative;
     top: 20px;
     left: 20px;
-    padding: 5px;
+    padding: 16px;
     width: 350px;
-}
+}*/
