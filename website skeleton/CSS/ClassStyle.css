@@ -17,7 +17,7 @@
     
 }
 
-div.bookmarkbar{
+#bookmarkbar{
     color: white;
     position: static;
     top: 5px;
@@ -28,6 +28,7 @@ div.bookmarkbar{
     padding-right: 0.5em;
     border: black;
     background-color: rgb(6, 97, 171);
+    width: 100%;
 
 }
 
@@ -138,10 +139,17 @@ h2{
 }
 
 #menu{
-   
+    color: white;
+    /*white-space: nowrap; /*text doesn't wrap*/
 }
 
+#sidelink{
+    color: white;
+}
 
+#menulink{
+    color: black;
+}
 
 #im{
     text-align: right;
@@ -149,9 +157,14 @@ h2{
 
 #resource{
     border-style: double;
+    color: black;
+    text-align: left;
+    width: 100%;
 }
 
-
+#menu-Contents{
+    text-align: left;
+}
 
 
 #globalNavPage {
@@ -163,11 +176,12 @@ h2{
     color: white;
     float: left;
     text-align: center;
-    height: 100%;
+    width: 100%;
 }
 
 #sidebar-inner {
     min-height: 100%;
+    text-align: center;
     height: auto;
 }
 
