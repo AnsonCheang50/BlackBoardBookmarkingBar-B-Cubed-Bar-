@@ -216,6 +216,7 @@ div.infomationData {
     display: table-cell;
     border: 1px solid #ddd;
     padding: 9px 18px;
+    vertical-align: top;
     width: 33%;
     white-space: nowrap;
 }
