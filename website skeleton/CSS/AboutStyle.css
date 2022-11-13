@@ -154,9 +154,30 @@ div.content{
     border: solid #ddd;
     position: relative;
     padding: 5px;
-    width: 375px;
-    
+    width: 375px; 
 }
+
+div.aboutheaderbox{
+    background-color: #f8f8f8;
+    color: black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    width: 100%;
+    position:relative;
+    border-top: solid #ddd;
+    border-left: solid #ddd;
+    border-right: solid #ddd; 
+}
+
+div.aboutdescbox{
+    background-color: white;
+    border: solid #ddd;
+    position: relative;
+    padding: 5px;
+    width: 100%; 
+}
+
 #courses{
     width: 450px;
     margin-left: 10px;
