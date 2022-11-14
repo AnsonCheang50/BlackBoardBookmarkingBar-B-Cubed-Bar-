@@ -1,8 +1,5 @@
 /* div."class" same as #"id" */
 
-boday{
-    background-color: rgb(6, 97, 171);;
-}
 
 #header{
     background-color: rgb(6, 97, 171);
@@ -60,6 +57,11 @@ h2{
     border: 0px;
     margin: 0px;
     font-family: 'Times New Roman', Times, serif;
+}
+
+#subheader{
+    text-align: left;
+    color: black;
 }
 
 #silo{
