@@ -127,9 +127,7 @@ body{
 div.background{
     background-color: #f8f8f8;
     border: solid #ddd;
-    padding-bottom: 30px;
-    padding-left: 5px;
-    /* padding-right: 5px; */
+    padding: 5%;
     margin-left: 25px;
     margin-right: 25px;
     margin-top: 15px;
@@ -155,20 +153,19 @@ div.content{
     position: relative;
     padding: 5px;
     width: 375px;
-    
 }
 #courses{
     width: 450px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-#aboutus{
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 #resources{
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#messages{
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 /* td.column1{
