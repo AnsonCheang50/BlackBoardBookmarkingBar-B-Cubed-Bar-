@@ -132,6 +132,7 @@ div.background{
     margin-right: 25px;
     margin-top: 15px;
     margin-bottom: 10px;
+    height: 300px;
 }
 
 /*Boxes*/
@@ -142,15 +143,16 @@ div.headerbox{
     padding-bottom: 5px;
     padding-left: 10px;
     width: 375px;
-    position:relative;
+    position: relative;
     border-top: solid #ddd;
     border-left: solid #ddd;
     border-right: solid #ddd;
+    margin-top: -50px;
 }
 div.content{
     background-color: white;
     border: solid #ddd;
-    position: relative;
+    position: fixed;
     padding: 5px;
     width: 375px;
 }
@@ -167,6 +169,7 @@ div.content{
     margin-left: 5px;
     margin-right: 5px;
 }
+
 
 /* td.column1{
     background-color: red;
@@ -189,11 +192,9 @@ td.column3{
 #classname{
     font-weight: bold;
 }
-
 #arrow{
     margin-left: 10px;
 }
-
 #menu{
     white-space: nowrap; text doesn't wrap
 #im{
@@ -214,3 +215,4 @@ div.class{
 #course-homepage {
     list-style: none;
 }*/
+

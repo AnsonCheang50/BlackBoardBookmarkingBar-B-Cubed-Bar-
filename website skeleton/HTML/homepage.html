@@ -10,113 +10,98 @@
     <link href="../CSS/HomeStyle.css" rel="stylesheet" />
     <link href="../CSS/BookmarkBarStyle.css" rel="stylesheet" />
 </head>
-
 <div class="top-navigation">
     <body>
-        <div>
-            <div id="header" class="col-md-10">
-                <table>
-                    <tr style="height: 150px;">
-                        <td id="fi" >
-                            <img src="../image/logo.png" width = 75 >
-                        </td>
-                        <td>
-                            <h1>University of Massachuesetts Lowell</h1>
-                            <h2>Blackboard Learning Management System</h2>
-                        </td>
-                    </tr>
-                </table>
-            </div>
+        <div id="header" class="col-md-10">
+            <table>
+                <tr style="height: 150px;">
+                    <td id="fi" >
+                        <img src="../image/logo.png" width = 75 >
+                    </td>
+                    <td>
+                        <h1>University of Massachuesetts Lowell</h1>
+                        <h2>Blackboard Learning Management System</h2>
+                    </td>
+                </tr>
+            </table>
+        </div>
         
 
-            <div id="header" class="col-md-2">
-                <button type = "button" onclick="myFunction()" class="dropbtn"><img src="../image/Silohuette.png" width = 18 id="silo">User&emsp;&emsp;&emsp;&emsp;<div class="arrow-down"></div></button>
-                <div id="myDropdown" class="dropdown-content">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                &ensp;
-                <!-- <img src="../image/power.jpg" width = 40 id="power"> -->
-                <br><br><br><br>
-                <div>&emsp;&emsp;<a href="../HTML/homepage.html" id="coursecenter">UML Course Center</a></div>
-
-            
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-            </div>
-
-            <div id="bookmarkbar">
+        <div id="header" class="col-md-2">
+            <button type = "button" onclick="myFunction()" class="dropbtn"><img src="../image/Silohuette.png" width = 18 id="silo">User&emsp;&emsp;&emsp;&emsp;<div class="arrow-down"></div></button>
+            <div id="myDropdown" class="dropdown-content">
                 <a href="#home">Home</a>
-                <a href="#news">News</a>
+                <a href="#about">About</a>
                 <a href="#contact">Contact</a>
             </div>
+            &ensp;
+            <!-- <img src="../image/power.jpg" width = 40 id="power"> -->
+            <br><br><br><br>
+            <div>&emsp;&emsp;<a href="../HTML/homepage.html" id="coursecenter">UML Course Center</a></div>
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
         </div>
 
-        <div>
-            <div class="background">
-                <table style="width: 100%;">
-                    <tr style="height: 350px;">
+        <div id="bookmarkbar">
+            <a href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <div>
+    <div class="background">
+        <table style="width: 100%;">
+                <tr>
                     
-                        <td class="column1">
-                            <div id="messages"  class="headerbox">
-                                <b>My Messages</b>
-                            </div>
-                            <div id="messages" class="content">
-                                <p style="color: rgb(110, 105, 105);">Courses with messages:</p>
-                                <p style="color: rgb(110, 105, 105);">&emsp;&emsp;<i>You have no new unread messages!</i></p>
-                                <p style="color: rgb(110, 105, 105);">Last Updated: Sunday, November 13, 2022 6:48:32 PM EST</p>
-                            </div>
-                        </td>
+                    <td class="column1">
+                        <div id="aboutus"  class="headerbox">
+                            <b>Meet the team</b>
+                        </div>
+                        <div id="aboutus" class="content">
+                            <dt>Anson Cheang</dt><dd><a href="https://www.linkedin.com/in/anson-cheang-44bbb5254/">Anson's Linkedin</a></dd>
+                            <dt>Arthur Rosa</dt><dd><a href="https://www.linkedin.com/in/arthur-rosa-59185a1ba/">Arthur's Linkedin</a></dd>
+                            <dt>Jayendra Rathore</dt><dd><a href="https://app.joinhandshake.com/stu/users/28133091">Jayendra's Handshake</a></dd>
+                            <dt>Seattle Bourassa</dt><dd><a href="">Seattle's Linkedin</a></dd>
+                            <dt>Shane Calla</dt><dd><a href="https://www.linkedin.com/in/shane-calla/">Shane's Linkedin</a></dd>
+                        </div>
+                    </td>
 
-                        <td class="column2">
-                            <div id="courses" class="headerbox">
-                                <b>My Courses</b>
-                            </div>
-                            <div id="courses" class="content">
-                                <p style="color: rgb(110, 105, 105);">Courses where you are: Student</p>
-                                <a href="../HTML/classexample.html"><b>COMP 4110 P 1 201 Software Engineering I 2022 Fall</b></a>
-                                <hr>
-                                <a href="../HTML/DataClass.html"><b>COMP 3090 P 1 202 Database I 2022 Fall</b></a>
-                            </div>
-                        </td>
+                    <td class="column2">
+                        <div id="courses" class="headerbox">
+                            <b>My Courses</b>
+                        </div>
+                        <div id="courses" class="content">
+                            <p style="color: rgb(110, 105, 105);">Courses where you are: Student</p>
+                            <a href="../HTML/classexample.html"><b>COMP 4110 P 1 201 Software Engineering I 2022 Fall</b></a>
+                            <hr>
+                            <a href="../HTML/classexample.html"><b>COMP 3090 P 1 202 Database I 2022 Fall</b></a>
+                        </div>
+                    </td>
 
-                        <td class="column3">
-                                <div id="support" class="headerbox">
-                                    <b>Tech Support</b>
-                                </div>
+                    <td class="column3">
+                        <div id="resources" class="headerbox">
+                            <b>Project Documentation</b>
+                        </div>
+                        <div id="resources" class="content">
+                            <dt><a href="../HTML/about.html">About the Project</a></dt>
+                            <dt><a href="https://www.linkedin.com/in/arthur-rosa-59185a1ba/">SRS Document</a></dt>
+                            <dt><b>Prototypes</b></dt><dd><a href="">BBBB-v1</a></dd>
+                            <dt><b>Links to Sources</b></dt><dd><a href="https://www.google.com">Google</a></dd>
+                        </div>
+                    </td>
 
-                                <div id="support" class="content">
-                                    <p><b><a href="../HTML/about.html">About the Project!</a></b></p>
-                                    <dt><b>Technical Support for Online and GPS courses</b></dt>
-                                    <ul>
-                                        <li>24x7 Call 1-800-480-3190 or <a href="https://embanet.frontlinesvc.com/app/home/p/2103">Live Chat</a></li>
-                                        <li>Email onlinelearning@uml.edu, Mon-Fri 8:30am-5:00pm</li>
-                                    </ul>
-                                    <dt><b>Technical Support for Undegraduate On-Campus courses</b></dt>
-                                    <ul>
-                                        <li>Email bbhelp@uml.edu, call 978-934-4357 or create a ticket: <a href="https://helpdesk.uml.edu">IT Service Desk</a></li>
-                                    </ul>
-                                    <dt><b>Disability Services</b></dt>
-                                    <ul>
-                                        <li><a href="https://www.uml.edu/student-services/disability/">Disability Services website</a></li>
-                                    </ul>
-                                    <p><b>Blackboard tutorials and mobile app</b></p>
-                                    <ul>
-                                        <li><a href="https://help.blackboard.com/Learn/Student/Original">Blackboard Learn Tutorials for Students</a></li>
-                                        <li><a href="https://www.blackboard.com/teaching-learning/learning-management/mobile-learning-solutions">Blackboard Student App Information</a></li>
-                                    </ul>
-                                </div>
-                        </td>
+                </tr>        
+        </table>
+   </div> 
+   </div> 
+   
 
-                    </tr>        
-                </table>
-            </div> 
-        </div> 
+    <script src="../Javascript/action.js"></script>
 
-        <script src="../Javascript/action.js"></script>
+</body>
 
-    </body>
-</div>
 </html>

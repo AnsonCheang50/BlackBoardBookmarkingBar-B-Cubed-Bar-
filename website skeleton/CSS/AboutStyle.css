@@ -39,7 +39,7 @@ hr {
 #silo{
     background-color: rgb(97, 97, 97);
     margin-left: 0px;
-    padding: 0px;
+    padding-right: 0px;
     margin: 5px;
 }
 .dropbtn {
@@ -148,11 +148,13 @@ div.headerbox{
     border-top: solid #ddd;
     border-left: solid #ddd;
     border-right: solid #ddd;
+    margin-top: -100px;
 }
+
 div.content{
     background-color: white;
     border: solid #ddd;
-    position: relative;
+    position: fixed;
     padding: 5px;
     width: 375px; 
 }
@@ -190,6 +192,22 @@ div.aboutdescbox{
 #resources{
     margin-left: 10px;
     margin-right: 10px;
+}
+
+#projectdoc{
+    margin-top: -100px;
+}
+
+#meetteam{
+    margin-top: -100px;
+}
+
+td{
+    padding-top: 0%;
+}
+
+td.column2b{
+    padding-top: 2%;
 }
 
 /* td.column1{
@@ -241,3 +259,4 @@ div.class{
 #course-homepage {
     list-style: none;
 }*/
+
