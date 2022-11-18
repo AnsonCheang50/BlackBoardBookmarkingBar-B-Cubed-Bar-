@@ -132,7 +132,7 @@ div.background{
     margin-right: 25px;
     margin-top: 15px;
     margin-bottom: 10px;
-    height: 300px;
+    height: 500px;
 }
 
 /*Boxes*/
@@ -153,7 +153,7 @@ div.content{
     background-color: white;
     border: solid #ddd;
     position: fixed;
-    padding: 5px;
+    padding: 10px;
     width: 375px;
 }
 #courses{
