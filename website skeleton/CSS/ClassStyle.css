@@ -231,3 +231,21 @@ div.content{
     padding: 5px;
     width: 350px;
 }
+
+
+
+
+
+
+
+
+td.ribbonBox {
+    position: relative;
+}
+
+img.ribbon{
+    position: absolute;
+    top: 0px;
+    right: 0px
+}
+
