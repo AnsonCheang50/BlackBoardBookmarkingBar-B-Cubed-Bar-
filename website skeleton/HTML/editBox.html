@@ -19,21 +19,21 @@
 
             <ul id = BookMarkBarView>
                 <li id = BookMarkBarFolder >
-                    <img src="../image/downArrow.png" alt="arrow">
+                    <input type = "image" src="../image/downArrow.png" alt="arrow" onclick="CollapseOrUnCollapse()"></input>
                     <img src="../image/Folder.png" alt="Folder">
                         BookmarkBar
                         <ul>
                             <li id = SWEFolder class = FolderView>
-                                <img src="../image/downArrow.png" alt="arrow">
+                                <input type = "image" src="../image/downArrow.png" alt="arrow" onclick="CollapseOrUnCollapse()"></input>
                                 <img src="../image/Folder.png" alt="Folder">
                                     SWE
                             </li>
-                            <ul>
+                            <ul>   
                                 <li id = SWEFolder class = FolderView>
-                                    <img src="../image/downArrow.png" alt="arrow">
+                                    <input type = "image" src="../image/downArrow.png" alt="arrow" onclick="CollapseOrUnCollapse()"></input>
                                     <img class = "iconFolder" src="../image/assignment.gif" alt="assignment">
                                         Assignment
-                                </li>
+                                </li> 
                             </ul>
                         </ul>
                         
@@ -42,14 +42,14 @@
 
             </ul>
             <div id = "doneBox">
-                Done
+                <input type="button" onclick="alert('Hello World!')" value="Done">
             </div>
             <div id = "removeBox">
-                Remove
+                <input type="button" onclick="alert('Hello World!')" value="Remove">
             </div>
 
             <div id = "newFolderBox">
-               Add New Folder
+                <input type="button" onclick="alert('Hello World!')" value="Add New Folder">
             </div>
 
         

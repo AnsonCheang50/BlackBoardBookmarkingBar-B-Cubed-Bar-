@@ -246,9 +246,10 @@ input.ribbon{
 
 
 #editBoxContainer {
-    display: table;
-    height: 100%;
-    width: 100%;
+    display: none;
+    z-index: 2;
+    background-color: wheat;
+    
 }
 #hcontainer{
     display: table-cell;
@@ -261,9 +262,9 @@ input.ribbon{
     border: lightGray 1px solid;
     text-align: left;
 }
-#cent {
+div.cent {
     position:absolute;
-    top:50%;
+    top:34%;
     left:50%;
     margin-top:-50px; /* this is half the height of your div*/  
     margin-left:-100px; /*this is half of width of your div*/
