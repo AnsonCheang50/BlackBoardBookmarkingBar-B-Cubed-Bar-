@@ -32,16 +32,34 @@ function barScroll() {
 }
 
 function addLinks() {
-
-
   var htmlString = "";
   for (let i = 0; i < bookmarks.length; i++) {
-    htmlString = htmlString + "<a href=\"" + bookmarks[i].link + "\">" + bookmarks[i].name + "</a>\n";
+    htmlString = htmlString + "<a href=\"" + bookmarks[i].link + "\" class=\"item\">" + bookmarks[i].name + "</a>\n";
   }
   console.log(htmlString);
 
-  document.getElementById('bookmarkbar').innerHTML = htmlString;
+  document.getElementById('links').innerHTML = htmlString;
 }
+
+$(document).bind("contextmenu",function(e){
+  return false;
+});
+
+$(document).ready(function(){
+$('#links').mousedown(function(event) {
+  switch(event.which) {
+      case 1:
+          break;
+      case 2:
+          break;
+      case 3:
+          alert("open edit bot");
+          break;
+      default:
+          break;
+  }
+});
+});
 
 
 
