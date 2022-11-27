@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>database class</title>
+    <title>operating systems class</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link href="../CSS/BookmarkBarStyle.css" rel="stylesheet" />
@@ -51,69 +51,21 @@
 
     <div id="middle" class="col-md-12">
         <br>
-        <p>&emsp;&emsp;&emsp;<b>COMP 3090 P 1 202 Database I 2022 Fall</b><img src="../image/down-.jpg" width = 20 id="arrow">&emsp;Home Page</p> 
+        <p>&emsp;&emsp;&emsp;<b>COMP 3080 HY 1 202 Operating Systems 2022 Fall</b><img src="../image/down-.jpg" width = 20 id="arrow">&emsp;Home Page</p> 
     </div>
     <div class="col-md-12" style="background-color: rgb(42,39,39); min-height: 5px;">
     </div>
     <div id = "globalNavPage">
-
-
-        <div class = "cent" id = "editBoxContainer"> <div id="hcontainer">
-            <div id = "content">
-                <div id = "NameBox">
-                    <form> 
-                        <label for="fname">Name:</label>
-                        <input type="text" id="fname" name="fname"><br>
-                    </form>
-                
-                </div>
-    
-                <ul id = BookMarkBarView>
-                    <li id = BookMarkBarFolder >
-                        <input type = "image" src="../image/downArrow.png" alt="arrow" onclick="CollapseOrUnCollapse()"></input>
-                        <img src="../image/Folder.png" alt="Folder">
-                            BookmarkBar
-                            <ul>
-                                <li id = SWEFolder class = FolderView>
-                                    <input type = "image" src="../image/downArrow.png" alt="arrow" onclick="CollapseOrUnCollapse()"></input>
-                                    <img src="../image/Folder.png" alt="Folder">
-                                        SWE
-                                </li>
-                                <ul>   
-                                    <li id = SWEFolder class = FolderView>
-                                        <input type = "image" src="../image/downArrow.png" alt="arrow" onclick="CollapseOrUnCollapse()"></input>
-                                        <img class = "iconFolder" src="../image/assignment.gif" alt="assignment">
-                                            Assignment
-                                    </li> 
-                                </ul>
-                            </ul>
-                            
-                    </li>
-    
-    
-                </ul>
-                <div id = "doneBox">
-                    <button type="button" id = "doneButton">Done</button>
-                </div>
-                <div id = "removeBox">
-                    <button type="button" id = "removeButton">Remove</button>
-                </div>
-                <div id = "newFolderBox">
-                    <button type="button" id = "newFolderButton" onclick="newFolderButton();" data-id-clicked="${item.id}">Add New Folder</button>
-                </div>
-            </div>
-        </div>
-        </div>
         <div id="sidebar" style="background-color: rgb(42,39,39);">
             <div id="sidebar-inner"  class="col-md-2">
                 <div id="menu">
                     <div id = "menu-Header">
                         <br>
-                        <p><b>COMP 3090 P 1 202 Database I 2022 Fall</b></p>
+                        <p><b>COMP 3080 HY 1 202 Operating Systems 2022 Fall</b></p>
                     </div>
                     <div id = "menu-Contents">
                         <ul id = "class-homepage">
-                            <a href="../HTML/DataClass.html" id = "sidelink">
+                            <a href="../HTML/os.html" id = "sidelink">
                             <span title="Home Page">Home Page</span>
                             </a>
                         </ul>
@@ -128,51 +80,32 @@
                 <h2 id="subheader">Home Page</h2>
                 <br>
                 <table id="resource">
-                    <tr id = "gumBox" style="border-style: double;">
+                    <tr style="border-style: double;">
                         <td width="5" style="padding: 20px;">
                             <img src="../image/file.jpg">
                         </td>
-                        <td id = "note" style="padding: 10px;">
+                        <td style="padding: 10px;">
                             Welcome to the gum zone
-                        </td>
-                        <td class = ribbonBox id = Welcome>
-                            <div>    
-                                <input type= "image" id="WelcomeRibbon" class = "ribbon" src="../image/bookmark.png" ></input>
-                            </div>
                         </td>
                     </tr>
                     <tr style="border-style: double;">
                         <td width="5" style="padding: 20px;">
-                            <img src="../image/assignment.gif">
+                            <img src="../image/file.jpg">
                         </td>
-
                         <td id = "assigment-link" style="padding: 10px;">
-                            <a href="../HTML/assignmentexample.html" id="menulink">
+                            <a href="../HTML/os_assignment.html" id="menulink">
                                 <span title="Assignment">Assignment</span>
                             </a>
-                
                         </td>
-
-                        <td class = ribbonBox id = SWEAssignment>
-                            <div>    
-                                <input type= "image" id= SWEAssignmentRibbon src="../image/bookmark.png" class="ribbon"></input>
-                            </div>
-                        </td>
-
                     </tr>
-                    <tr> 
+                    <tr>
                         <td width="5" style="padding: 20px;">
                             <img src="../image/file.jpg">
                         </td>
-                        <td id = "note2" style="padding: 10px;">
+                        <td style="padding: 10px;">
                             <p>
                                 Extra Section: filler text
                             </p>
-                        </td>
-                        <td class = ribbonBox id = Extra>
-                            <div>    
-                                <input type= "image" id = "ExtraRibbon" src="../image/bookmark.png" class="ribbon"></input>
-                            </div>
                         </td>
                     </tr>
                 </table>
