@@ -64,3 +64,66 @@ function myFunction() {
     }
   }
 
+
+  let clickedId;
+
+  var elements = document.getElementsByClassName("ribbon");
+
+
+  
+  
+  for(var i = 0; i < elements.length; i++) {
+    elements[i].addEventListener('click', displayEditBox, false);    
+    // elements[i].addEventListener("click", () => clickedId = elements[i].id); 
+  }
+
+  elements[0].addEventListener("click", () => clickedId = elements[0].id); 
+  elements[1].addEventListener("click", () => clickedId = elements[1].id); 
+  elements[2].addEventListener("click", () => clickedId = elements[2].id); 
+
+
+
+
+
+  doneButton.addEventListener("click", () => doneButtonFunction(clickedId));
+
+  removeButton.addEventListener("click", () => removeButtonFunction(clickedId));
+
+  function doneButtonFunction(clickedId) {
+     test = document.getElementById(clickedId);
+     test.src = "../image/FilledBookmark.png";
+
+    div = document.getElementById('editBoxContainer');
+    div.style.display = "none";
+  }
+
+
+  function removeButtonFunction(clickedId) {
+    document.getElementById(clickedId).src = "../image/bookmark.png";
+    div = document.getElementById('editBoxContainer');
+    div.style.display = "none";
+    
+  }
+
+
+
+
+  function displayEditBox() {
+
+    
+
+
+    div = document.getElementById('editBoxContainer');
+    if (div.style.display == 'block') {
+      div.style.display = "none";
+    }
+    else {
+      div.style.display = "block";
+
+    }
+
+  }
+
+
+
+
