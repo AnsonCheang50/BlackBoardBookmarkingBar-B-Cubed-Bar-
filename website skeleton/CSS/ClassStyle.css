@@ -271,17 +271,19 @@ div.cent {
   }
 
 
-#BookMarkBarView {
+#BookMarkFolderView {
     display: block;
     border: lightGray 1px solid;
     padding:0px;
-    list-style: none;
+    width:150px; 
 }
 
 div.FolderView {
     list-style-type: none;
 
 }
+
+
 #doneBox {
     display: inline-block;
     border: lightGray 1px solid;

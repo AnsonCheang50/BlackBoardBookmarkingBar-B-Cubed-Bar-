@@ -107,6 +107,19 @@ function myFunction() {
 
   removeButton.addEventListener("click", () => removeButtonFunction(clickedId));
 
+
+
+  newFolderButton.addEventListener("click", () => addBookMarkFolder());
+
+  function addBookMarkFolder() {
+    var x = document.getElementById("BookMarkFolderView");
+    var option = document.createElement("option");
+    var name = prompt("Enter Name");
+    option.text = name;
+    x.add(option);
+
+  }
+
   function doneButtonFunction(clickedId) {
      test = document.getElementById(clickedId);
      test.src = "../image/FilledBookmark.png";
@@ -128,7 +141,6 @@ function myFunction() {
 
   function displayEditBox() {
 
-    
 
 
     div = document.getElementById('editBoxContainer');
