@@ -12,8 +12,8 @@ let sampleListObj = [{
 }, {
    type : "Bookmark",
    obj : {
-      link : "../HTML/classexample.html",
-      name : "My Class"
+      link : "../HTML/assignmentexample.html",
+      name : "My Assignment"
    }
 
 }, {
@@ -59,44 +59,18 @@ removeButton.addEventListener("click", () => removeButtonFunction(clickedId));
 
 //Functions
 //main Activitiy all onload activities
-async function mainActivity() {
+function mainActivity() {
 
-  console.log("Version = " + 1);
-
-
-  //BookmarkBar bar = new BookmarkBar();
-
-  response = await fetch("https://ansoncheang50.github.io/BlackBoardBookmarkingBar-B-Cubed-Bar-/website%20skeleton/Data/bookmarks.json", {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: sampleListObj,
-    });
-
-    response.json().then(data => {
-      console.log(data);
-    });
-
-    console.log("data1 = ");
-    console.log(data);
-
-
-    let requestURL = "https://ansoncheang50.github.io/BlackBoardBookmarkingBar-B-Cubed-Bar-/website%20skeleton/Data/bookmarks.json";
-    let request = new Request(requestURL);
-
-    let response = await fetch(request);
-    let bookmakrs = await response.json();
-    console.log("data2 = ");
-    console.log(bookamrks);
+  addLinks(sampleListObj);
 
 }
 
 function addLinks(bookmarks) {
   var htmlString = "";
   for (let i = 0; i < bookmarks.length; i++) {
-    htmlString = htmlString + "<a href=\"" + bookmarks[i].link + "\" class=\"item\">" + bookmarks[i].name + "</a>\n";
+    if (bookmarks[i].type == "Bookmark") {
+      htmlString = htmlString + "<a href=\"" + bookmarks[i].obj.link + "\" class=\"item\">" + bookmarks[i].obj.name + "</a>\n";
+    }
   }
   console.log(htmlString);
 
