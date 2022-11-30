@@ -108,7 +108,7 @@ $(document).ready(function(){
         case 2:
             break;
         case 3:
-          displayEditBox();
+            displayEditBox();
             break;
         default:
             break;
@@ -118,8 +118,8 @@ $(document).ready(function(){
 
 
 
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
+function displayEditBox() {
+    document.getElementById("editBoxContainer").classList.toggle("show");
   }
   
   // Close the dropdown if the user clicks outside of it
