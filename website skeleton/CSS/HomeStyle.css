@@ -119,6 +119,11 @@ div.bookmarkbar{
     border-top: 1px solid black;
     border: 1px solid black;
 }
+#editBoxContainer {
+    display: none;
+    z-index: 2;
+    background-color: wheat;   
+}
 
 /*Body*/
 body{
