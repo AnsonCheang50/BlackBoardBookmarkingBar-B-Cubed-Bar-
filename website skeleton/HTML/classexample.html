@@ -78,30 +78,11 @@
                 
                 </div>
     
-                <ul id = BookMarkBarView>
-                    <li id = BookMarkBarFolder >
-                        <input type = "image" src="../image/downArrow.png" alt="arrow" onclick="CollapseOrUnCollapse()"></input>
-                        <img src="../image/Folder.png" alt="Folder">
-                            BookmarkBar
-                            <ul>
-                                <li id = SWEFolder class = FolderView>
-                                    <input type = "image" src="../image/downArrow.png" alt="arrow" onclick="CollapseOrUnCollapse()"></input>
-                                    <img src="../image/Folder.png" alt="Folder">
-                                        SWE
-                                </li>
-                                <ul>   
-                                    <li id = SWEFolder class = FolderView>
-                                        <input type = "image" src="../image/downArrow.png" alt="arrow" onclick="CollapseOrUnCollapse()"></input>
-                                        <img class = "iconFolder" src="../image/assignment.gif" alt="assignment">
-                                            Assignment
-                                    </li> 
-                                </ul>
-                            </ul>
-                            
-                    </li>
-    
-    
-                </ul>
+                <select name="BookMarkFolder" id="BookMarkFolderView">
+                    <option value="BookMarkBar">BookMarkBar</option>
+                    <option value="SWE_Assignments">SWE_Assignments</option>
+                    <option value="Algorithm Notes">Algorithm Notes</option>
+                  </select>
                 <div id = "doneBox">
                     <button type="button" id = "doneButton">Done</button>
                 </div>
@@ -109,7 +90,7 @@
                     <button type="button" id = "removeButton">Remove</button>
                 </div>
                 <div id = "newFolderBox">
-                    <button type="button" id = "newFolderButton" onclick="newFolderButton();" data-id-clicked="${item.id}">Add New Folder</button>
+                    <button type="button" id = "newFolderButton">Add New Folder</button>
                 </div>
             </div>
         </div>
