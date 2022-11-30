@@ -152,9 +152,8 @@ function displayEditBox() {
   }
 
   function doneButtonFunction(clickedId) {
-     test = document.getElementById(clickedId);
-     test.src = "../image/FilledBookmark.png";
-
+    test = document.getElementById(clickedId);
+    test.src = "../image/FilledBookmark.png";
     div = document.getElementById('editBoxContainer');
     div.style.display = "none";
   }
@@ -169,8 +168,6 @@ function displayEditBox() {
 
 
   function displayEditBox() {
-
-
 
     div = document.getElementById('editBoxContainer');
     if (div.style.display == 'block') {
