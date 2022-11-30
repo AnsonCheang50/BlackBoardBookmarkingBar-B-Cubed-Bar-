@@ -42,6 +42,7 @@ var sticky = navbar.offsetTop;
 let clickedId;
 var elements = document.getElementsByClassName("ribbon");
 
+
 //Listeners
 //-------------------------Edit Box Listeners------------------------------
 for(var i = 0; i < elements.length; i++) {
@@ -107,7 +108,7 @@ $(document).ready(function(){
         case 2:
             break;
         case 3:
-            myFunction();
+          displayEditBox();
             break;
         default:
             break;

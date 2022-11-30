@@ -51,7 +51,39 @@
     </div>
     <div class="col-md-12" style="background-color: rgb(42,39,39); min-height: 5px;">
     </div>
+
+
+
+
     <div id = "globalNavPage">
+        <div class = "cent" id = "editBoxContainer"> <div id="hcontainer">
+            <div id = "content">
+                <div id = "NameBox">
+                    <form> 
+                        <label for="fname">Name:</label>
+                        <input type="text" id="fname" name="fname"><br>
+                    </form>
+                
+                </div>
+    
+                <select name="BookMarkFolder" id="BookMarkFolderView">
+                    <option value="BookMarkBar">BookMarkBar</option>
+                    <option value="SWE_Assignments">SWE_Assignments</option>
+                    <option value="Algorithm Notes">Algorithm Notes</option>
+                  </select>
+                <div id = "doneBox">
+                    <button type="button" id = "doneButton">Done</button>
+                </div>
+                <div id = "removeBox">
+                    <button type="button" id = "removeButton">Remove</button>
+                </div>
+                <div id = "newFolderBox">
+                    <button type="button" id = "newFolderButton">Add New Folder</button>
+                </div>
+            </div>
+        </div>
+        </div>
+
         <div id="sidebar" style="background-color: rgb(42,39,39);">
             <div id="sidebar-inner"  class="col-md-2">
                 <div id="menu">
@@ -83,6 +115,11 @@
                         <td style="padding: 10px;">
                             Welcome to the gum zone
                         </td>
+                        <td class = ribbonBox id = Welcome>
+                            <div>    
+                                <input type= "image" id="WelcomeRibbon" class = "ribbon" src="../image/bookmark.png" ></input>
+                            </div>
+                        </td>
                     </tr>
                     <tr style="border-style: double;">
                         <td width="5" style="padding: 20px;">
@@ -93,6 +130,12 @@
                                 <span title="Assignment">Assignment</span>
                             </a>
                         </td>
+
+                        <td class = ribbonBox id = AlgorthmnsAssignment>
+                            <div>    
+                                <input type= "image" id= AlgorithmsAssignmentRibbon src="../image/bookmark.png" class="ribbon"></input>
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <td width="5" style="padding: 20px;">
@@ -102,6 +145,12 @@
                             <p>
                                 Extra Section: filler text
                             </p>
+                        </td>
+
+                        <td class = ribbonBox id = Extra>
+                            <div>    
+                                <input type= "image" id= ExtraRibbon src="../image/bookmark.png" class="ribbon"></input>
+                            </div>
                         </td>
                     </tr>
                 </table>
