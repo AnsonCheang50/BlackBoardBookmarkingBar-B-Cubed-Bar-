@@ -1,33 +1,7 @@
 // BookmarkBar.js
-//What a sample subset of the data might look like
-let sampleListObj = [{
-   type : "Bookmark",
-   obj : {
-      link : "../HTML/classexample.html",
-      name : "My Class"
-   }
-}, {
-   type : "Bookmark",
-   obj : {
-      link : "../HTML/classexample.html",
-      name : "My Class"
-   }
-
-}, {
-   name : "Class Folder",
-   type : "Folder",
-   obj : 
-      [{
-         link : "../HTML/classexample.html",
-         name : "My Class"
-      }, {
-         link : "../HTML/classexample.html",
-         name : "My Class"
-      }]
-}]
-
-
 // Class holds Main bookmarking bar list. It will hold all of the methods to add and delete bookmarks and folders on the bar
+//What a sample subset of the data might look like
+
 class BookmarkBar {
    bookmarkList;
 
@@ -35,7 +9,6 @@ class BookmarkBar {
    constuctor() {
     this.bookmarkList = Array();
    }
-
 
    // when recieving JSON object call function with listObj to build current list of bookmarks and folders
    addObj(listObj) {
@@ -167,3 +140,6 @@ class Bookmark {
    }
 
 }
+
+
+export {BookmarkBar};
