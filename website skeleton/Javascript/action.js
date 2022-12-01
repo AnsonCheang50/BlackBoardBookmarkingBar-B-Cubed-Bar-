@@ -30,7 +30,7 @@ let sampleListObj = [{
 }]
 
 //window Listeners
-window.onload = function () { mainActivity() };
+window.onload = function () { setUpBookmarkBar() };
 window.onscroll = function() { barScroll() };
 
 
@@ -41,6 +41,10 @@ var sticky = navbar.offsetTop;
 //Get Ribbon elements
 let clickedId;
 var elements = document.getElementsByClassName("ribbon");
+
+
+
+
 
 
 //Listeners
@@ -59,9 +63,14 @@ if(elements.length > 0){
   }
   doneButton.addEventListener("click", () => doneButtonFunction(clickedId));
   removeButton.addEventListener("click", () => removeButtonFunction(clickedId));
+  
 }
 
 //-------------------------Edit Box Listeners------------------------------
+
+
+
+
 
 //Functions
 //main Activitiy all onload activities
@@ -71,17 +80,23 @@ function mainActivity() {
 
 }
 
-function addLinks(bookmarks) {
+async function addLinks(bookmarks) {
   var htmlString = "";
   for (let i = 0; i < bookmarks.length; i++) {
     if (bookmarks[i].type == "Bookmark") {
-      htmlString = htmlString + "<a href=\"" + bookmarks[i].obj.link + "\" class=\"item\">" + bookmarks[i].obj.name + "</a>\n";
+      htmlString = htmlString + "<a href=\"" + bookmarks[i].obj.link + "\" class=\"item\" id=\"" + bookmarks[i].obj.name + "\">" + bookmarks[i].obj.name + "</a>\n";
     }
   }
   console.log(htmlString);
 
   document.getElementById('links').innerHTML = htmlString;
+
+  return;
 }
+
+//Access bookmark object and remove the clicked one
+
+
 
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
@@ -96,7 +111,7 @@ function barScroll() {
 }
 
 
-$(document).bind("contextmenu",function(e){
+$(links).bind("contextmenu",function(e){
   return false;
 });
 
@@ -108,7 +123,7 @@ $(document).ready(function(){
         case 2:
             break;
         case 3:
-            displayEditBox();
+          displayBBBBEditBox();
             break;
         default:
             break;
@@ -118,8 +133,8 @@ $(document).ready(function(){
 
 
 
-function displayEditBox() {
-    document.getElementById("editBoxContainer").classList.toggle("show");
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
   }
   
   // Close the dropdown if the user clicks outside of it
@@ -155,6 +170,10 @@ function displayEditBox() {
      test = document.getElementById(clickedId);
      test.src = "../image/FilledBookmark.png";
 
+     console.log(clickedId);
+
+     
+
     div = document.getElementById('editBoxContainer');
     div.style.display = "none";
   }
@@ -183,6 +202,77 @@ function displayEditBox() {
 
   }
 
+    
+  function displayBBBBEditBox() {
+
+    div = document.getElementById('BBBBeditBoxContainer');
+    if (div.style.display == 'block') {
+      div.style.display = "none";
+    }
+    else {
+      div.style.display = "block";
+
+    }
+
+  }
 
 
 
+  //------------------------- Bookmark Bar Edit Box Listeners------------------------------
+
+
+  let BookMarkId;
+
+  async function setUpBookmarkBar() {
+
+
+    await addLinks(sampleListObj);
+   
+
+    var BookmarkBarElements = document.getElementById("links"); //Im trying to get all the ids of current bookmarks
+
+    var elements = BookmarkBarElements.getElementsByTagName('a');
+
+   
+
+    for(let j = 0; j < elements.length; j++) {  
+      //const element = elements[j];
+      elements[j].addEventListener("click", () => BookMarkId = elements[j].id);
+      console.log(elements[j].id);
+
+
+      BBBBdoneButton.addEventListener("click", () => BBBBdoneButtonFunction(BookMarkId));
+      BBBBremoveButton.addEventListener("click", () => BBBBremoveButtonFunction(BookMarkId));
+        
+
+    }
+
+   
+
+
+  
+
+
+  }
+
+  
+//-------------------------Bookmark Bar Edit Box Listeners------------------------------
+
+
+  
+function BBBBremoveButtonFunction(BookMarkId) {
+  var test = document.getElementById(BookMarkId);
+
+  console.log(BookMarkId);
+
+  test.remove();
+
+
+  div = document.getElementById('editBoxContainer');
+  div.style.display = "none";
+}
+
+
+function BBBBdoneButtonFunction(clickedId) {
+
+}
