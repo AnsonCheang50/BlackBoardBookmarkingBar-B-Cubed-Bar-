@@ -233,20 +233,24 @@ function myFunction() {
 
     var elements = BookmarkBarElements.getElementsByTagName('a');
 
+    console.log(elements[1]);
+
    
 
     for(let j = 0; j < elements.length; j++) {  
       //const element = elements[j];
-      elements[j].addEventListener("click", () => BookMarkId = elements[j].id);
+      elements[j].addEventListener("contextmenu", () => BookMarkId = elements[j].id);
       console.log(elements[j].id);
 
 
-      BBBBdoneButton.addEventListener("click", () => BBBBdoneButtonFunction(BookMarkId));
-      BBBBremoveButton.addEventListener("click", () => BBBBremoveButtonFunction(BookMarkId));
-        
-
     }
 
+
+
+    
+    BBBBdoneButton.addEventListener("click", () => BBBBdoneButtonFunction(BookMarkId));
+    BBBBremoveButton.addEventListener("click", () => BBBBremoveButtonFunction(BookMarkId));
+      
    
 
 
@@ -265,7 +269,15 @@ function BBBBremoveButtonFunction(BookMarkId) {
 
   console.log(BookMarkId);
 
-  test.remove();
+
+  if(test == null){
+
+  }
+
+  else{
+
+    test.remove();
+  }
 
 
   div = document.getElementById('editBoxContainer');
