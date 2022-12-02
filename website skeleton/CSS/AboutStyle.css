@@ -189,9 +189,19 @@ div.aboutdescbox{
     margin-left: 10px;
     margin-right: 10px;
 }
+#aboutuscontent{
+    margin-left: 10px;
+    margin-right: 10px;
+    overflow: auto;
+}
 #resources{
     margin-left: 10px;
     margin-right: 10px;
+}
+#resourcescontent{
+    margin-left: 10px;
+    margin-right: 10px;
+    overflow: auto;
 }
 
 #projectdoc{
