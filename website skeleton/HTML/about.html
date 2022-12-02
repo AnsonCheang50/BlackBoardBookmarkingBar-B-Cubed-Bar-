@@ -120,7 +120,21 @@
                                 <li><a href="">Requirements and Use Cases</a></li>
                                 <li><a href="">Class and Sequence Diagrams</a></li>
                             </ul>
-                            <dt><a href="">Free V-Bucks</a></dt>
+                            Enter password: <input id='password' type='text'  />
+                            <br>
+                            <a href="../HTML/secure.html" onclick="javascript:return validatePass()"><b>Free V-Bucks!</b></a>
+                                
+                            <script>
+                                function validatePass(){
+                                    if(document.getElementById('password').value == 'bookmark'){
+                                        return true;
+                                    }else{
+                                        alert('wrong password!!');
+                                    return false;
+                                    }
+                                }
+                            </script>
+                            
                         </div>
                     </td>
 
