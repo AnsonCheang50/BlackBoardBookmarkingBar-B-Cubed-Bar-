@@ -30,7 +30,7 @@ let sampleListObj = [{
 }]
 
 //window Listeners
-window.onload = function () { setUpBookmarkBar() };
+window.onload = function () { mainActivity() };
 window.onscroll = function() { barScroll() };
 
 
@@ -74,13 +74,15 @@ if(elements.length > 0){
 
 //Functions
 //main Activitiy all onload activities
-function mainActivity() {
+async function mainActivity() {
 
-  addLinks(sampleListObj);
+  await addLinks(sampleListObj);
+  setUpBookmarkBar();
+  setUpBBBBEditBox();
 
 }
 
-async function addLinks(bookmarks) {
+function addLinks(bookmarks) {
   var htmlString = "";
   for (let i = 0; i < bookmarks.length; i++) {
     if (bookmarks[i].type == "Bookmark") {
@@ -223,39 +225,55 @@ function myFunction() {
 
   let BookMarkId;
 
-  async function setUpBookmarkBar() {
+  function setUpBookmarkBar() {
+    
 
-
-    await addLinks(sampleListObj);
-   
 
     var BookmarkBarElements = document.getElementById("links"); //Im trying to get all the ids of current bookmarks
 
     var elements = BookmarkBarElements.getElementsByTagName('a');
 
-    console.log(elements[1]);
+    
+
+   
+
+    for(let j = 0; j < elements.length; j++) { 
+      BookmarkId =  elements[j].id;
+      elements[j].addEventListener("contextmenu", anson = saveBookMarkId.bind(elements[j], elements[j].id)); // Theres was an error here because the event listener is trying to find elements[j].id, which doesn't exist. I don't know how to remove event listener
+      console.log(elements[j].id);                                                                        // I bs'ed it, anson is a reference to the Orignal function, so I am able to remove using removeEventListner. As Javascript does not like functions with parameters. (considered anomoyous function that cant be traced back)
+
+
+    }    
+
+  }
+
+  function saveBookMarkId (input) {
+
+    BookMarkId = input;
+
+  }
+
+  function setUpBBBBEditBox() {
+    
+    BBBBdoneButton.addEventListener("click", () => BBBBdoneButtonFunction(BookMarkId));
+    BBBBremoveButton.addEventListener("click", () => BBBBremoveButtonFunction(BookMarkId));
+
+  }
+
+
+  function removeBookMarkEventListener() {
+    var BookmarkBarElements = document.getElementById("links"); //Im trying to get all the ids of current bookmarks
+
+    var elements = BookmarkBarElements.getElementsByTagName('a');
+
+    
 
    
 
     for(let j = 0; j < elements.length; j++) {  
-      //const element = elements[j];
-      elements[j].addEventListener("contextmenu", () => BookMarkId = elements[j].id);
+      elements[j].removeEventListener("contextmenu",  anson);
       console.log(elements[j].id);
-
-
     }
-
-
-
-    
-    BBBBdoneButton.addEventListener("click", () => BBBBdoneButtonFunction(BookMarkId));
-    BBBBremoveButton.addEventListener("click", () => BBBBremoveButtonFunction(BookMarkId));
-      
-   
-
-
-  
-
 
   }
 
@@ -267,24 +285,39 @@ function myFunction() {
 function BBBBremoveButtonFunction(BookMarkId) {
   var test = document.getElementById(BookMarkId);
 
-  console.log(BookMarkId);
+  console.log(test);
 
 
-  if(test == null){
+  removeBookMarkEventListener();
 
-  }
+  test.remove();
 
-  else{
-
-    test.remove();
-  }
+  setUpBookmarkBar();
 
 
-  div = document.getElementById('editBoxContainer');
+  div = document.getElementById('BBBBeditBoxContainer');
   div.style.display = "none";
 }
 
 
-function BBBBdoneButtonFunction(clickedId) {
+function BBBBdoneButtonFunction(BookMarkId) {
+  var bookmark = document.getElementById(BookMarkId);
+  var nameBox = document.getElementById("fname");
+
+  console.log(bookmark.innerHTML);
+
+  bookmark.innerHTML = nameBox.value;
+
+  
+
+
+
+  div = document.getElementById('BBBBeditBoxContainer');
+  div.style.display = "none";
 
 }
+
+
+
+
+
