@@ -1,8 +1,50 @@
 {
+    "assignments":[
+        
+        {
+            "className": "SWE",
+            "classId": 0,
+            "classLink": "assignmentexample.html"
+        },
+        {
+            "className": "Alg",
+            "classId": 1,
+            "classLink": "alg_assignment.html"
+        },
+        {
+            "className": "OS",
+            "classId": 2,
+            "classLink": "os_assignment.html"
+        },
+        {
+            "className": "Data",
+            "classId": 3,
+            "classLink": "databasehw.html"
+        }
 
-    
+    ],
+    "classes":[
+        
+        {
+            "className": "SWE",
+            "classId": 4,
+            "classLink": "classexample.html"
+        },
+        {
+            "className": "Alg",
+            "classId": 5,
+            "classLink": "algorithms.html"
+        },
+        {
+            "className": "OS",
+            "classId": 6,
+            "classLink": "os.html"
+        },
+        {
+            "className": "Data",
+            "classId": 7,
+            "classLink": "DataClass.html"
+        }
 
-   
-
-
+    ]
 }

@@ -179,6 +179,14 @@ function myFunction() {
     if(clickedId.includes('SWE'))
     {
       link = link + 'assignmentexample.html';
+      fetch('bookmark.json').then(function(response){
+        return response.json();
+      }).then(function(obj){
+        console.log(obj);
+      }).catch(function(error){
+        console.error('you done goofed');
+        console.error(error);
+      });
     }
     else if(clickedId.includes('Alg'))
     {
@@ -233,9 +241,6 @@ function removeButtonFunction(clickedId) {
 
 
  function displayEditBox() {
-
-
-
    div = document.getElementById('editBoxContainer');
    if (div.style.display == 'block') {
      div.style.display = "none";
