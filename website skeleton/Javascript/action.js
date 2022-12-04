@@ -171,55 +171,67 @@ function myFunction() {
   function doneButtonFunction(clickedId) {
     var name = document.getElementById("fname").value;
     var link = "../HTML/";
+    var id;
     test = document.getElementById(clickedId);
     test.src = "../image/FilledBookmark.png";
+    id = test.id + 'id';
+    var check = document.getElementById(id);
 
-    if(clickedId.includes('Assignment'))
+
+    
+    if(name == "")
     {
-     if(clickedId.includes('SWE'))
-     {
-       link = link + 'assignmentexample.html';
-     }
-     else if(clickedId.includes('Alg'))
-     {
-       link = link + 'alg_assignment.html';
-     }
-     else if(clickedId.includes('OS'))
-     {
-       link = link + 'os_assignment.html';
-     }
-     else if(clickedId.includes('Data'))
-     {
-       link = link + 'databasehw.html';
-     }
+      name = test.id;
+    }
+    if(check != null)
+    {
+      document.getElementById(id).innerText = name;
     }
     else
     {
-     if(clickedId.includes('SWE'))
-     {
-       link = link + 'classexample.html';
-     }
-     else if(clickedId.includes('Alg'))
-     {
-       link = link + 'algorithms.html';
-     }
-     else if(clickedId.includes('OS'))
-     {
-       link = link + 'os.html';
-     }
-     else if(clickedId.includes('Data'))
-     {
-       link = link + 'DataClass.html';
-     }
+      if(clickedId.includes('Assignment'))
+      {
+        if(clickedId.includes('SWE'))
+        {
+          link = link + 'assignmentexample.html';
+        }
+        else if(clickedId.includes('Alg'))
+        {
+          link = link + 'alg_assignment.html';
+        }
+        else if(clickedId.includes('OS'))
+        {
+          link = link + 'os_assignment.html';
+        }
+        else if(clickedId.includes('Data'))
+        {
+          link = link + 'databasehw.html';
+        }
+      }
+      else
+      {
+        if(clickedId.includes('SWE'))
+        {
+          link = link + 'classexample.html';
+        }
+        else if(clickedId.includes('Alg'))
+        {
+          link = link + 'algorithms.html';
+        }
+        else if(clickedId.includes('OS'))
+        {
+          link = link + 'os.html';
+        }
+        else if(clickedId.includes('Data'))
+        {
+          link = link + 'DataClass.html';
+        }
+      }
+      $('#links').append('<a href=\"' + link +'\" class=\"item\" id=\"' + test.id + 'id\">' + name + '</a>\n');
     }
-
-    console.log(clickedId);
-
-    $('#links').append('<a href=\"' + link +'\" class=\"item\" id=\"' + test.id + 'id\">' + name + '</a>\n');
-
-   div = document.getElementById('editBoxContainer');
-   div.style.display = "none";
- }
+    div = document.getElementById('editBoxContainer');
+    div.style.display = "none";
+  }
 
 
  function removeButtonFunction(clickedId) {
