@@ -272,6 +272,11 @@ div.cent {
     margin-left:-100px; /*this is half of width of your div*/
   }
 
+  #BBBBeditBoxContainer {
+    display: none;
+    z-index: 2;
+    background-color: wheat;
+}
 
 #BBBBdoneBox {
     display: inline-block;
