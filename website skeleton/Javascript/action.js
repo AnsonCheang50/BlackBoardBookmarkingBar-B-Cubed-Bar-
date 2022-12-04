@@ -2,33 +2,6 @@
 //import { BookmarkBar } from './Javascript/BookmarkBar.js' 
 
 
-// sample data
-let sampleListObj = [{
-   type : "Bookmark",
-   obj : {
-      link : "../HTML/classexample.html",
-      name : "My Class"
-   }
-}, {
-   type : "Bookmark",
-   obj : {
-      link : "../HTML/assignmentexample.html",
-      name : "My Assignment"
-   }
-
-}, {
-   name : "Class Folder",
-   type : "Folder",
-   obj : 
-      [{
-         link : "../HTML/classexample.html",
-         name : "My Class"
-      }, {
-         link : "../HTML/classexample.html",
-         name : "My Class"
-      }]
-}]
-
 //window Listeners
 window.onload = function () { mainActivity() };
 window.onscroll = function() { barScroll() };
@@ -75,8 +48,14 @@ if(elements.length > 0){
 //Functions
 //main Activitiy all onload activities
 async function mainActivity() {
+let requestURL = "https://ansoncheang50.github.io/BlackBoardBookmarkingBar-B-Cubed-Bar-/website%20skeleton/Data/bookmark.json";
+let request = new Request(requestURL);
 
-  await addLinks(sampleListObj);
+let response = await fetch(request);
+let bookmarkbar = await response.json();
+
+console.log(bookmarkbar); 
+  await addLinks(bookmarkbar[sampleUserObj]);
   setUpBookmarkBar();
   setUpBBBBEditBox();
 
@@ -194,6 +173,11 @@ function myFunction() {
         if(clickedId.includes('SWE'))
         {
           link = link + 'assignmentexample.html';
+          fetch('bookmark.json').then(function(response){
+            return response.json();
+          }).then(function(obj){
+            console.log(obj);
+          })
         }
         else if(clickedId.includes('Alg'))
         {
