@@ -7,13 +7,15 @@ let sampleListObj = [{
    type : "Bookmark",
    obj : {
       link : "../HTML/classexample.html",
-      name : "My Class"
+      name : "My Class",
+      id : "asdf"
    }
 }, {
    type : "Bookmark",
    obj : {
       link : "../HTML/assignmentexample.html",
-      name : "My Assignment"
+      name : "My Assignment",
+      id : "asdf"
    }
 
 }, {
@@ -104,7 +106,7 @@ function addLinks(bookmarks) {
   var htmlString = "";
   for (let i = 0; i < bookmarks.length; i++) {
     if (bookmarks[i].type == "Bookmark") {
-      htmlString = htmlString + "<a href=\"" + bookmarks[i].obj.link + "\" class=\"bookmarkOnBar bookMarkItems\" id=\"" + bookmarks[i].obj.name + "\">" + bookmarks[i].obj.name + "</a>\n";
+      htmlString = htmlString + "<a href=\"" + bookmarks[i].obj.link + "\" class=\"bookmarkOnBar bookMarkItems\" id=\"" + bookmarks[i].obj.id + "\">" + bookmarks[i].obj.name + "</a>\n";
     }
     else if (bookmarks[i].type == "Folder") {
       
@@ -117,7 +119,6 @@ function addLinks(bookmarks) {
     }
 
   }
-  console.log(htmlString);
 
   document.getElementById('links').innerHTML = htmlString;
 
@@ -125,7 +126,6 @@ function addLinks(bookmarks) {
 }
 
 function folderDropdown(folderID) {
-  console.log("folderDropdown Works");
   document.getElementById(folderID).classList.toggle("show");
 }
 
@@ -204,6 +204,17 @@ function myFunction() {
   }
 
   function doneButtonFunction(clickedId) {
+    // Get Current Object Get Request
+    let returnObj = sampleListObj;
+    // Get Current Objecct
+    // set up new object
+
+    let newBookmark = {type : "Bookmark",
+      obj : {
+      link : "",
+      name : ""
+    }}
+
     var name = document.getElementById("fname").value;
     var link = "../HTML/";
     var id;
@@ -262,25 +273,40 @@ function myFunction() {
           link = link + 'DataClass.html';
         }
       }
-      $('#links').append('<a href=\"' + link +'\" class=\"item\" id=\"' + test.id + 'id\">' + name + '</a>\n');
+      //$('#links').append('<a href=\"' + link +'\" class=\"item\" id=\"' + test.id + 'id\">' + name + '</a>\n');
+      newBookmark.obj.name = name;
+      newBookmark.obj.link = link;
+      newBookmark.obj.id = test.id;
+      console.log(test.id);
+      sampleListObj.push(newBookmark);
+      //Send Object Up e.g Post method
+
+      addLinks(sampleListObj);
     }
     div = document.getElementById('editBoxContainer');
     div.style.display = "none";
   }
 
 
- function removeButtonFunction(clickedId) {
-   var rmid = clickedId + 'id';
-   document.getElementById(clickedId).src = "../image/bookmark.png";
-   div = document.getElementById('editBoxContainer');
-   $('#' + rmid).remove();
-   div.style.display = "none";
-   
- }
+function removeButtonFunction(clickedId) {
+    //get object via get request
+    newObject = sampleListObj;
+    for(var i = 0; i < sampleListObj.length; i++) {
+      if (sampleListObj[i].type == "Bookmark") {
+        if (sampleListObj[i].obj.id == clickedId) {
+          sampleListObj.splice(i, 1);
+          break;
+        }
+      }
+    }
+    addLinks(sampleListObj);
+    document.getElementById(clickedId).src = "../image/bookmark.png";
+    div = document.getElementById('editBoxContainer');
+    div.style.display = "none";
+}
 
 
   function displayEditBox() {
-
 
 
     div = document.getElementById('editBoxContainer');
@@ -316,25 +342,16 @@ function myFunction() {
   let BookMarkId;
 
   function setUpBookmarkBar() {
-    
-
 
     var BookmarkBarElements = document.getElementById("links"); //Im trying to get all the ids of current bookmarks
 
     var elements = BookmarkBarElements.getElementsByClassName('bookMarkItems');
 
 
-
-
-
-   
-
-   
-
     for(let j = 0; j < elements.length; j++) { 
       BookmarkId =  elements[j].id;
       elements[j].addEventListener("contextmenu", anson = saveBookMarkId.bind(elements[j], elements[j].id)); // Theres was an error here because the event listener is trying to find elements[j].id, which doesn't exist. I don't know how to remove event listener
-      console.log(elements[j]);                                                                        // I bs'ed it, anson is a reference to the Orignal function, so I am able to remove using removeEventListner. As Javascript does not like functions with parameters. (considered anomoyous function that cant be traced back)
+                                                                 // I bs'ed it, anson is a reference to the Orignal function, so I am able to remove using removeEventListner. As Javascript does not like functions with parameters. (considered anomoyous function that cant be traced back)
 
 
     }    
@@ -366,7 +383,6 @@ function myFunction() {
 
     for(let j = 0; j < elements.length; j++) {  
       elements[j].removeEventListener("contextmenu",  anson);
-      console.log(elements[j].id);
     }
 
   }
@@ -378,8 +394,6 @@ function myFunction() {
   
 function BBBBremoveButtonFunction(BookMarkId) {
   var test = document.getElementById(BookMarkId);
-
-  console.log(test);
 
 
   removeBookMarkEventListener();
@@ -395,10 +409,9 @@ function BBBBremoveButtonFunction(BookMarkId) {
 
 
 function BBBBdoneButtonFunction(BookMarkId) {
+  console.log(BookMarkId);
   var bookmark = document.getElementById(BookMarkId);
   var nameBox = document.getElementById("fname");
-
-  console.log(bookmark.innerHTML);
 
   bookmark.innerHTML = nameBox.value;
 
