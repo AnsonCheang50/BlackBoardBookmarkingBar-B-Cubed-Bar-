@@ -110,7 +110,7 @@ function addLinks(bookmarks) {
       htmlString = htmlString + "</div>";
     }
   }
-  console.log(htmlString);
+  //console.log(htmlString);
 
   document.getElementById('links').innerHTML = htmlString;
 
@@ -185,7 +185,7 @@ function myFunction() {
 
 
 
-  newFolderButton.addEventListener("click", () => addBookMarkFolder());
+  newFolderButtonElement.addEventListener("click", () => addBookMarkFolder());
 
   function addBookMarkFolder() {
     var x = document.getElementById("BookMarkFolderView");
@@ -323,7 +323,7 @@ function myFunction() {
     for(let j = 0; j < elements.length; j++) { 
       BookmarkId =  elements[j].id;
       elements[j].addEventListener("contextmenu", anson = saveBookMarkId.bind(elements[j], elements[j].id)); // Theres was an error here because the event listener is trying to find elements[j].id, which doesn't exist. I don't know how to remove event listener
-      console.log(elements[j].id);                                                                        // I bs'ed it, anson is a reference to the Orignal function, so I am able to remove using removeEventListner. As Javascript does not like functions with parameters. (considered anomoyous function that cant be traced back)
+      console.log(elements[2].id);                                                                        // I bs'ed it, anson is a reference to the Orignal function, so I am able to remove using removeEventListner. As Javascript does not like functions with parameters. (considered anomoyous function that cant be traced back)
 
 
     }    
