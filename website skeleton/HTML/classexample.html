@@ -7,8 +7,8 @@
     <title>example class</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <link href="../CSS/BookmarkBarStyle.css" rel="stylesheet" />
     <link href="../CSS/ClassStyle.css" rel="stylesheet" />
+    <link href="../CSS/BookmarkBarStyle.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 </head>
 
@@ -64,6 +64,33 @@
 
     
     <div id = "globalNavPage">
+        <div class = "cent" id = "BBBBeditBoxContainer"> <div id="hcontainer">
+            <div id = "content">
+                <div id = "NameBox">
+                    <form> 
+                        <label for="fname">Name:</label>
+                        <input type="text" id="bname" name="fname"><br>
+                    </form>
+                
+                </div>
+    
+                <select name="BookMarkFolder" id="BookMarkFolderView">
+                    <option value="BookMarkBar">BookMarkBar</option>
+                    <option value="SWE_Assignments">SWE_Assignments</option>
+                    <option value="Algorithm Notes">Algorithm Notes</option>
+                  </select>
+                <div id = "BBBBdoneBox">
+                    <button type="button" id = "BBBBdoneButton">Done</button>
+                </div>
+                <div id = "BBBBremoveBox">
+                    <button type="button" id = "BBBBremoveButton">Remove</button>
+                </div>
+                <div id = "newFolderBox">
+                    <button type="button" id = "newFolderButton">Add New Folder</button>
+                </div>
+            </div>
+        </div>
+        </div>
         <div class = "cent" id = "editBoxContainer"> <div id="hcontainer">
             <div id = "content">
                 <div id = "NameBox">
