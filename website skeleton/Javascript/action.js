@@ -153,11 +153,13 @@ function myFunction() {
     }
   }
 
+  var newFolderButtonElement = document.getElementById("newFolderButton");
 
 
 
 
-  newFolderButton.addEventListener("click", () => addBookMarkFolder());
+
+  newFolderButtonElement.addEventListener("click", () => addBookMarkFolder()); 
 
   function addBookMarkFolder() {
     var x = document.getElementById("BookMarkFolderView");
@@ -176,6 +178,11 @@ function myFunction() {
     test.src = "../image/FilledBookmark.png";
     id = test.id + 'id';
     var check = document.getElementById(id);
+
+    console.log(test.id);
+
+    setUpBookmarkBar();
+
 
 
     
@@ -357,15 +364,13 @@ function BBBBremoveButtonFunction(BookMarkId) {
 
 function BBBBdoneButtonFunction(BookMarkId) {
   var bookmark = document.getElementById(BookMarkId);
-  var nameBox = document.getElementById("fname");
+  var nameBox = document.getElementById("bname").value;
 
-  console.log(bookmark.innerHTML);
+  console.log(bookmark.innerText);
 
-  bookmark.innerHTML = nameBox.value;
+  bookmark.innerText = nameBox;
 
   
-
-
 
   div = document.getElementById('BBBBeditBoxContainer');
   div.style.display = "none";
