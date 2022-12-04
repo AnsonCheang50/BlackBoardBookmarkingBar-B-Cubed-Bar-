@@ -23,10 +23,13 @@ let sampleListObj = [{
    obj : 
       [{
          link : "../HTML/classexample.html",
-         name : "My Class"
+         name : "My Class",
+         id : "MyClass"
       }, {
          link : "../HTML/classexample.html",
-         name : "My Class"
+         name : "My Class",
+         id : "MyClass"
+
       }]
 }, {
   name : "Class Folder2",
@@ -35,10 +38,12 @@ let sampleListObj = [{
   obj : 
      [{
         link : "../HTML/assignmentexample.html",
-        name : "My Assignment"
+        name : "My Assignment",
+        id : "MyAssignment"
      }, {
         link : "../HTML/assignmentexample.html",
-        name : "My Assignment"
+        name : "My Assignment",
+        id :  "MyAssignment"
      }]
 }]
 
@@ -99,16 +104,18 @@ function addLinks(bookmarks) {
   var htmlString = "";
   for (let i = 0; i < bookmarks.length; i++) {
     if (bookmarks[i].type == "Bookmark") {
-      htmlString = htmlString + "<a href=\"" + bookmarks[i].obj.link + "\" class=\"bookmarkOnBar\" id=\"" + bookmarks[i].obj.name + "\">" + bookmarks[i].obj.name + "</a>\n";
+      htmlString = htmlString + "<a href=\"" + bookmarks[i].obj.link + "\" class=\"bookmarkOnBar bookMarkItems\" id=\"" + bookmarks[i].obj.name + "\">" + bookmarks[i].obj.name + "</a>\n";
     }
     else if (bookmarks[i].type == "Folder") {
-      htmlString = htmlString + "<div onclick=\"folderDropdown("+bookmarks[i].id+")\" class=\"bookmarkFolder\" id=\"" + bookmarks[i].name + "\">" + bookmarks[i].name + "</div>\n";
+      
+      htmlString = htmlString + "<div onclick=\"folderDropdown("+bookmarks[i].id+")\" class=\"bookmarkFolder bookMarkItems\" id=\"" + bookmarks[i].name + "\">" + bookmarks[i].name + "</div>\n";
       htmlString = htmlString + "<div class=\"folderDDItem\" id=\"" + bookmarks[i].id + "\">\n";
       for (let j = 0; j < bookmarks[i].obj.length; j++) {
-        htmlString = htmlString + "<a class=\"folderItem\" href=\"" + bookmarks[i].obj[j].link + "\">" + bookmarks[i].obj[j].name + "</a>\n";
+        htmlString = htmlString + "<a class=\"folderItem bookMarkItems\" id=\"" + bookmarks[i].obj[j].id + "\" href=\"" +  bookmarks[i]. obj[j].link + "\">" + bookmarks[i].obj[j].name + "</a>\n";
       }
       htmlString = htmlString + "</div>";
     }
+
   }
   console.log(htmlString);
 
@@ -185,7 +192,7 @@ function myFunction() {
 
 
 
-  newFolderButtonElement.addEventListener("click", () => addBookMarkFolder()); 
+  newFolderButtonElement.addEventListener("click", () => addBookMarkFolder());
 
   function addBookMarkFolder() {
     var x = document.getElementById("BookMarkFolderView");
@@ -204,11 +211,6 @@ function myFunction() {
     test.src = "../image/FilledBookmark.png";
     id = test.id + 'id';
     var check = document.getElementById(id);
-
-    console.log(test.id);
-
-    setUpBookmarkBar();
-
 
 
     
@@ -319,16 +321,20 @@ function myFunction() {
 
     var BookmarkBarElements = document.getElementById("links"); //Im trying to get all the ids of current bookmarks
 
-    var elements = BookmarkBarElements.getElementsByTagName('a');
+    var elements = BookmarkBarElements.getElementsByClassName('bookMarkItems');
 
-    
+
+
+
+
+   
 
    
 
     for(let j = 0; j < elements.length; j++) { 
       BookmarkId =  elements[j].id;
       elements[j].addEventListener("contextmenu", anson = saveBookMarkId.bind(elements[j], elements[j].id)); // Theres was an error here because the event listener is trying to find elements[j].id, which doesn't exist. I don't know how to remove event listener
-      console.log(elements[j].id);                                                                        // I bs'ed it, anson is a reference to the Orignal function, so I am able to remove using removeEventListner. As Javascript does not like functions with parameters. (considered anomoyous function that cant be traced back)
+      console.log(elements[j]);                                                                        // I bs'ed it, anson is a reference to the Orignal function, so I am able to remove using removeEventListner. As Javascript does not like functions with parameters. (considered anomoyous function that cant be traced back)
 
 
     }    
@@ -390,13 +396,15 @@ function BBBBremoveButtonFunction(BookMarkId) {
 
 function BBBBdoneButtonFunction(BookMarkId) {
   var bookmark = document.getElementById(BookMarkId);
-  var nameBox = document.getElementById("bname").value;
+  var nameBox = document.getElementById("fname");
 
-  console.log(bookmark.innerText);
+  console.log(bookmark.innerHTML);
 
-  bookmark.innerText = nameBox;
+  bookmark.innerHTML = nameBox.value;
 
   
+
+
 
   div = document.getElementById('BBBBeditBoxContainer');
   div.style.display = "none";
