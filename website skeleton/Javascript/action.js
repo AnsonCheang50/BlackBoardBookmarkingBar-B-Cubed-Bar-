@@ -353,6 +353,120 @@ function BBBBdoneButtonFunction(BookMarkId) {
 
  
 
+    
+  function displayBBBBEditBox() {
+
+    div = document.getElementById('BBBBeditBoxContainer');
+    if (div.style.display == 'block') {
+      div.style.display = "none";
+    }
+    else {
+      div.style.display = "block";
+
+    }
+
+  }
+
+
+
+  //------------------------- Bookmark Bar Edit Box Listeners------------------------------
+
+
+  let BookMarkId;
+
+  function setUpBookmarkBar() {
+    
+
+
+    var BookmarkBarElements = document.getElementById("links"); //Im trying to get all the ids of current bookmarks
+
+    var elements = BookmarkBarElements.getElementsByTagName('a');
+
+    
+
+   
+
+    for(let j = 0; j < elements.length; j++) { 
+      BookmarkId =  elements[j].id;
+      elements[j].addEventListener("contextmenu", anson = saveBookMarkId.bind(elements[j], elements[j].id)); // Theres was an error here because the event listener is trying to find elements[j].id, which doesn't exist. I don't know how to remove event listener
+      console.log(elements[j].id);                                                                        // I bs'ed it, anson is a reference to the Orignal function, so I am able to remove using removeEventListner. As Javascript does not like functions with parameters. (considered anomoyous function that cant be traced back)
+
+
+    }    
+
+  }
+
+  function saveBookMarkId (input) {
+
+    BookMarkId = input;
+
+  }
+
+  function setUpBBBBEditBox() {
+    
+    BBBBdoneButton.addEventListener("click", () => BBBBdoneButtonFunction(BookMarkId));
+    BBBBremoveButton.addEventListener("click", () => BBBBremoveButtonFunction(BookMarkId));
+
+  }
+
+
+  function removeBookMarkEventListener() {
+    var BookmarkBarElements = document.getElementById("links"); //Im trying to get all the ids of current bookmarks
+
+    var elements = BookmarkBarElements.getElementsByTagName('a');
+
+    
+
+   
+
+    for(let j = 0; j < elements.length; j++) {  
+      elements[j].removeEventListener("contextmenu",  anson);
+      console.log(elements[j].id);
+    }
+
+  }
+
+  
+//-------------------------Bookmark Bar Edit Box Listeners------------------------------
+
+
+  
+function BBBBremoveButtonFunction(BookMarkId) {
+  var test = document.getElementById(BookMarkId);
+
+  console.log(test);
+
+
+  removeBookMarkEventListener();
+
+  test.remove();
+
+  setUpBookmarkBar();
+
+
+  div = document.getElementById('BBBBeditBoxContainer');
+  div.style.display = "none";
+}
+
+
+function BBBBdoneButtonFunction(BookMarkId) {
+  var bookmark = document.getElementById(BookMarkId);
+  var nameBox = document.getElementById("fname");
+
+  console.log(bookmark.innerHTML);
+
+  bookmark.innerHTML = nameBox.value;
+
+  
+
+
+
+  div = document.getElementById('BBBBeditBoxContainer');
+  div.style.display = "none";
+
+}
+
+
 
 
  div = document.getElementById('BBBBeditBoxContainer');
