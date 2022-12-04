@@ -48,7 +48,7 @@ if(elements.length > 0){
 //Functions
 //main Activitiy all onload activities
 async function mainActivity() {
-let requestURL = "https://127.0.0.1:5984/_utils/#database/bookmarks/c5926a8bdcc095a139c176dbea00931f";
+let requestURL = "https://ansoncheang50.github.io/BlackBoardBookmarkingBar-B-Cubed-Bar-/website%20skeleton.html";
 //let request = new Request(requestURL);
 
 const response = await fetch(requestURL);
