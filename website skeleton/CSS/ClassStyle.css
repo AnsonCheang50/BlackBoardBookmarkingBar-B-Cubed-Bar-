@@ -273,6 +273,19 @@ div.cent {
   }
 
 
+#BBBBdoneBox {
+    display: inline-block;
+    border: lightGray 1px solid;
+    background-color: lightblue;
+}
+
+#BBBBremoveBox {
+    display: inline-block;
+    border: lightGray 1px solid;
+    background-color: lightpink;
+}
+
+
 #BookMarkFolderView {
     display: block;
     border: lightGray 1px solid;
