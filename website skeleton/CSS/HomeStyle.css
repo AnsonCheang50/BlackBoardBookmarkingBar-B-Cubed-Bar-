@@ -175,6 +175,14 @@ div.content{
     margin-right: 5px;
 }
 
+/*Secure Box*/
+#securebox{
+    background-color: white;
+    border: solid #ddd;
+    position: fixed;
+    padding: 10px;
+    width: 375px;
+}
 
 #BBBBeditBoxContainer {
     display: none;
