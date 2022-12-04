@@ -1,50 +1,28 @@
 {
-    "assignments":[
-        
-        {
-            "className": "SWE",
-            "classId": 0,
-            "classLink": "assignmentexample.html"
-        },
-        {
-            "className": "Alg",
-            "classId": 1,
-            "classLink": "alg_assignment.html"
-        },
-        {
-            "className": "OS",
-            "classId": 2,
-            "classLink": "os_assignment.html"
-        },
-        {
-            "className": "Data",
-            "classId": 3,
-            "classLink": "databasehw.html"
+    "sampleUserObj": [{
+        "type" : "Bookmark",
+        "obj" : {
+           "link" : "../HTML/classexample.html",
+           "name" : "My Class",
+           "id": ""
         }
-
-    ],
-    "classes":[
-        
-        {
-            "className": "SWE",
-            "classId": 4,
-            "classLink": "classexample.html"
-        },
-        {
-            "className": "Alg",
-            "classId": 5,
-            "classLink": "algorithms.html"
-        },
-        {
-            "className": "OS",
-            "classId": 6,
-            "classLink": "os.html"
-        },
-        {
-            "className": "Data",
-            "classId": 7,
-            "classLink": "DataClass.html"
+     }, {
+        "type" : "Bookmark",
+        "obj" : {
+           "link" : "../HTML/assignmentexample.html",
+           "name" : "My Assignment",
+           "id":""
         }
-
-    ]
+     }, {
+        "name" : "Class Folder",
+        "type" : "Folder",
+        "obj" : 
+           [{
+              "link" : "../HTML/classexample.html",
+              "name" : "My Class"
+           }, {
+              "link" : "../HTML/classexample.html",
+              "name" : "My Class"
+           }]
+     }]
 }
