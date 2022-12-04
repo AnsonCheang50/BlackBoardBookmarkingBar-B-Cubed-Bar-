@@ -90,7 +90,6 @@ if(elements.length > 0){
 async function mainActivity() {
 let requestURL = "https://ansoncheang50.github.io/BlackBoardBookmarkingBar-B-Cubed-Bar-/website%20skeleton/Data/bookmark.json";
 let request = new Request(requestURL);
-
 let response = await fetch(request);
 let bookmarkbar = await response.json();
 
