@@ -169,24 +169,67 @@ function myFunction() {
   }
 
   function doneButtonFunction(clickedId) {
-     test = document.getElementById(clickedId);
-     test.src = "../image/FilledBookmark.png";
+    var name = document.getElementById("fname").value;
+    var link = "../HTML/";
+    test = document.getElementById(clickedId);
+    test.src = "../image/FilledBookmark.png";
 
-     console.log(clickedId);
+    if(clickedId.includes('Assignment'))
+    {
+     if(clickedId.includes('SWE'))
+     {
+       link = link + 'assignmentexample.html';
+     }
+     else if(clickedId.includes('Alg'))
+     {
+       link = link + 'alg_assignment.html';
+     }
+     else if(clickedId.includes('OS'))
+     {
+       link = link + 'os_assignment.html';
+     }
+     else if(clickedId.includes('Data'))
+     {
+       link = link + 'databasehw.html';
+     }
+    }
+    else
+    {
+     if(clickedId.includes('SWE'))
+     {
+       link = link + 'classexample.html';
+     }
+     else if(clickedId.includes('Alg'))
+     {
+       link = link + 'algorithms.html';
+     }
+     else if(clickedId.includes('OS'))
+     {
+       link = link + 'os.html';
+     }
+     else if(clickedId.includes('Data'))
+     {
+       link = link + 'DataClass.html';
+     }
+    }
 
-     
+    console.log(clickedId);
 
-    div = document.getElementById('editBoxContainer');
-    div.style.display = "none";
-  }
+    $('#links').append('<a href=\"' + link +'\" class=\"item\" id=\"' + test.id + 'id\">' + name + '</a>\n');
+
+   div = document.getElementById('editBoxContainer');
+   div.style.display = "none";
+ }
 
 
-  function removeButtonFunction(clickedId) {
-    document.getElementById(clickedId).src = "../image/bookmark.png";
-    div = document.getElementById('editBoxContainer');
-    div.style.display = "none";
-    
-  }
+ function removeButtonFunction(clickedId) {
+   var rmid = clickedId + 'id';
+   document.getElementById(clickedId).src = "../image/bookmark.png";
+   div = document.getElementById('editBoxContainer');
+   $('#' + rmid).remove();
+   div.style.display = "none";
+   
+ }
 
 
   function displayEditBox() {
