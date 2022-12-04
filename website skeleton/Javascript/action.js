@@ -191,7 +191,7 @@ function myFunction() {
 
 
 
-  newFolderButtonElement.addEventListener("click", () => addBookMarkFolder()); 
+  newFolderButton.addEventListener("click", () => addBookMarkFolder());
 
   function addBookMarkFolder() {
     var x = document.getElementById("BookMarkFolderView");
@@ -210,11 +210,6 @@ function myFunction() {
     test.src = "../image/FilledBookmark.png";
     id = test.id + 'id';
     var check = document.getElementById(id);
-
-    console.log(test.id);
-
-    setUpBookmarkBar();
-
 
 
     
@@ -401,13 +396,15 @@ function BBBBremoveButtonFunction(BookMarkId) {
 
 function BBBBdoneButtonFunction(BookMarkId) {
   var bookmark = document.getElementById(BookMarkId);
-  var nameBox = document.getElementById("bname").value;
+  var nameBox = document.getElementById("fname");
 
-  console.log(bookmark.innerText);
+  console.log(bookmark.innerHTML);
 
-  bookmark.innerText = nameBox;
+  bookmark.innerHTML = nameBox.value;
 
   
+
+
 
   div = document.getElementById('BBBBeditBoxContainer');
   div.style.display = "none";
