@@ -3,7 +3,7 @@
 
 
 //window Listeners
-window.onload = function () { mainActivity() };
+window.onload = async function () { mainActivity() };
 window.onscroll = function() { barScroll() };
 
 
@@ -48,10 +48,10 @@ if(elements.length > 0){
 //Functions
 //main Activitiy all onload activities
 async function mainActivity() {
-let requestURL = "https://ansoncheang50.github.io/BlackBoardBookmarkingBar-B-Cubed-Bar-/website%20skeleton/Data/bookmark.json";
-let request = new Request(requestURL);
+let requestURL = "https://127.0.0.1:5984/_utils/#database/bookmarks/c5926a8bdcc095a139c176dbea00931f";
+//let request = new Request(requestURL);
 
-let response = await fetch(request);
+const response = await fetch(requestURL);
 let bookmarkbar = await response.json();
 
 console.log(bookmarkbar); 
@@ -173,11 +173,6 @@ function myFunction() {
         if(clickedId.includes('SWE'))
         {
           link = link + 'assignmentexample.html';
-          fetch('bookmark.json').then(function(response){
-            return response.json();
-          }).then(function(obj){
-            console.log(obj);
-          })
         }
         else if(clickedId.includes('Alg'))
         {
