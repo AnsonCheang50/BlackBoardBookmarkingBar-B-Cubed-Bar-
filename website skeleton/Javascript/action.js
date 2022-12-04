@@ -19,6 +19,7 @@ let sampleListObj = [{
 }, {
    name : "Class Folder",
    type : "Folder",
+   id : "0",
    obj : 
       [{
          link : "../HTML/classexample.html",
@@ -27,6 +28,18 @@ let sampleListObj = [{
          link : "../HTML/classexample.html",
          name : "My Class"
       }]
+}, {
+  name : "Class Folder2",
+  type : "Folder",
+  id : "1",
+  obj : 
+     [{
+        link : "../HTML/assignmentexample.html",
+        name : "My Assignment"
+     }, {
+        link : "../HTML/assignmentexample.html",
+        name : "My Assignment"
+     }]
 }]
 
 //window Listeners
@@ -86,7 +99,15 @@ function addLinks(bookmarks) {
   var htmlString = "";
   for (let i = 0; i < bookmarks.length; i++) {
     if (bookmarks[i].type == "Bookmark") {
-      htmlString = htmlString + "<a href=\"" + bookmarks[i].obj.link + "\" class=\"item\" id=\"" + bookmarks[i].obj.name + "\">" + bookmarks[i].obj.name + "</a>\n";
+      htmlString = htmlString + "<a href=\"" + bookmarks[i].obj.link + "\" class=\"bookmarkOnBar\" id=\"" + bookmarks[i].obj.name + "\">" + bookmarks[i].obj.name + "</a>\n";
+    }
+    else if (bookmarks[i].type == "Folder") {
+      htmlString = htmlString + "<div onclick=\"folderDropdown("+bookmarks[i].id+")\" class=\"bookmarkFolder\" id=\"" + bookmarks[i].name + "\">" + bookmarks[i].name + "</div>\n";
+      htmlString = htmlString + "<div class=\"folderDDItem\" id=\"" + bookmarks[i].id + "\">\n";
+      for (let j = 0; j < bookmarks[i].obj.length; j++) {
+        htmlString = htmlString + "<a class=\"folderItem\" href=\"" + bookmarks[i].obj[j].link + "\">" + bookmarks[i].obj[j].name + "</a>\n";
+      }
+      htmlString = htmlString + "</div>";
     }
   }
   console.log(htmlString);
@@ -94,6 +115,11 @@ function addLinks(bookmarks) {
   document.getElementById('links').innerHTML = htmlString;
 
   return;
+}
+
+function folderDropdown(folderID) {
+  console.log("folderDropdown Works");
+  document.getElementById(folderID).classList.toggle("show");
 }
 
 //Access bookmark object and remove the clicked one
