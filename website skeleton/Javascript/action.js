@@ -48,6 +48,8 @@ window.onload = function () { mainActivity() };
 window.onscroll = function() { barScroll() };
 
 
+
+
 // Get the navbar pos and element
 var navbar = document.getElementById("bookmarkbar");
 var sticky = navbar.offsetTop;
