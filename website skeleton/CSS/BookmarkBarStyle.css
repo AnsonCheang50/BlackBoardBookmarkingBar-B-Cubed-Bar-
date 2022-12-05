@@ -49,13 +49,22 @@ div.top-navigation {
 }
 
 .bookmarkFolder {
-  float: left;
+  /*float: left;
   display: block;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  border: none;
+  cursor: pointer;*/
+  color: white;
+  padding: 14px 16px;
+  width: 150px;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
 }
 
 .bookmarkFolder:hover {
@@ -83,15 +92,28 @@ div.top-navigation {
   display: block;
 }
 
+.aligneverything{
+    position: absolute;
+    display: inline-block;
+}
+
 .folderDDItem {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
+  overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 2;
-  top: 100%;
 }
+.folderDDItem a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.folderDDItem a:hover {background-color: #ddd;}
+
 
 .show {display:block;}
 
