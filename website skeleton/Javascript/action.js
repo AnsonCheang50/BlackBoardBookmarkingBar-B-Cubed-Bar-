@@ -1,5 +1,9 @@
 //imports
 //import { BookmarkBar } from './Javascript/BookmarkBar.js' 
+//CLOUDANT USERNAME
+//6a8cbe59-58dd-4005-9a53-21d7671a709d-bluemix
+//CLOUDANT PASSWORD
+//
 
 
 //window Listeners
@@ -49,9 +53,9 @@ if(elements.length > 0){
 //main Activitiy all onload activities
 async function mainActivity() {
 let requestURL = "https://ansoncheang50.github.io/BlackBoardBookmarkingBar-B-Cubed-Bar-/website%20skeleton.html";
-//let request = new Request(requestURL);
+let request = new Request(requestURL);
 
-const response = await fetch(requestURL);
+let response = await fetch(requestURL);
 let bookmarkbar = await response.json();
 
 console.log(bookmarkbar); 
