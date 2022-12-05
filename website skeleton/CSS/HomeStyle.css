@@ -205,7 +205,7 @@ div.cent {
 }
   
 
-#BookMarkFolderView {
+.BookMarkFolderView {
     display: block;
     border: lightGray 1px solid;
     padding:0px;

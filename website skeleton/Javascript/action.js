@@ -4,43 +4,43 @@
 
 // sample data
 let sampleListObj = [{
-   type : "Bookmark",
-   obj : {
-      link : "../HTML/classexample.html",
-      name : "My Class",
-      id : "asdf"
-   }
+  type : "Bookmark",
+  obj : {
+     link : "../HTML/classexample.html",
+     name : "My Class",
+     id : "asdf"
+  }
 }, {
-   type : "Bookmark",
-   obj : {
-      link : "../HTML/assignmentexample.html",
-      name : "My Assignment",
-      id : "dfg"
-   }
+  type : "Bookmark",
+  obj : {
+     link : "../HTML/assignmentexample.html",
+     name : "My Assignment",
+     id : "dfg"
+  }
 
 }, {
-   name : "Class Folder",
-   type : "Folder",
-   id : "0",
-   obj : 
-      [{
-        type : "Bookmark",
-        obj : {
-           link : "../HTML/assignmentexample.html",
-           name : "Assignment1",
-           id : "qwe"
-        }
-     
-     },
-     {
-      type : "Bookmark",
-      obj : {
-         link : "../HTML/assignmentexample.html",
-         name : "Assignment2",
-         id : "dfewqeg"
-      }
-   
-   }]
+  name : "Class Folder",
+  type : "Folder",
+  id : "0",
+  obj : 
+     [{
+       type : "Bookmark",
+       obj : {
+          link : "../HTML/assignmentexample.html",
+          name : "Assignment1",
+          id : "qwe"
+       }
+    
+    },
+    {
+     type : "Bookmark",
+     obj : {
+        link : "../HTML/assignmentexample.html",
+        name : "Assignment2",
+        id : "dfewqeg"
+     }
+  
+  }]
 }]
 
 //window Listeners
@@ -95,6 +95,7 @@ async function mainActivity() {
   await addLinks(sampleListObj);
   setUpBookmarkBar();
   setUpBBBBEditBox();
+  updateFolderDisplay();
 
 }
 
@@ -285,11 +286,17 @@ function myFunction() {
       newBookmark.obj.name = name;
       newBookmark.obj.link = link;
       newBookmark.obj.id = test.id;
-      console.log(test.id);
+
+      
+
+
+
       sampleListObj.push(newBookmark);
       //Send Object Up e.g Post method
 
        addLinks(sampleListObj);
+
+       updateFolderDisplay();
 
        removeBookMarkEventListener();
   
@@ -312,6 +319,7 @@ function removeButtonFunction(clickedId) {
       }
     }
     addLinks(sampleListObj);
+    updateFolderDisplay();
     document.getElementById(clickedId).src = "../image/bookmark.png";
     div = document.getElementById('editBoxContainer');
     div.style.display = "none";
@@ -450,6 +458,8 @@ async function BBBBremoveButtonFunction(BookMarkId) {
 
   await addLinks(sampleListObj);
 
+  updateFolderDisplay();
+
   console.log(sampleListObj);
 
 
@@ -472,15 +482,55 @@ function BBBBdoneButtonFunction(BookMarkId) {
 
   bookmark.innerHTML = nameBox.value;
 
+  var found = findBookMark(BookMarkId);
 
 
-  
+
+  console.log(found);
+
+
+  found.name = nameBox.value;
+
+
+  updateFolderDisplay();
 
 
 
   div = document.getElementById('BBBBeditBoxContainer');
   div.style.display = "none";
 
+}
+
+
+function findBookMark(BookMarkId) { 
+
+    //get object via get request   // maybe you need this idk - Arthur
+
+    newObject = sampleListObj;
+
+
+    for(var i = 0; i < sampleListObj.length; i++ ) {
+  
+
+      if(sampleListObj[i].type == "Folder") {
+        console.log(i);
+        if(sampleListObj[i].id == BookMarkId ) {
+          return sampleListObj[i];
+        }
+        for (var j = 0; j < sampleListObj[i].obj.length; j++) {
+          if(sampleListObj[i].obj[j].obj.id == BookMarkId ) {
+            console.log(sampleListObj[i].obj[j]);
+            return sampleListObj[i].obj[j].obj;
+          }
+        }
+      }
+
+      else if(sampleListObj.type == "Bookmark") {
+        if(sampleListObj[i].obj.id == BookMarkId ) {
+          return sampleListObj[i].obj;
+        }
+      }
+    } 
 }
 
 function BBBBaddBookMarkFolder() {
@@ -511,8 +561,13 @@ function BBBBaddBookMarkFolder() {
 
   addLinks(sampleListObj);
 
+  updateFolderDisplay();
+
+  if(sampleListObj.length != 1) {
   
-  removeBookMarkEventListener();
+    removeBookMarkEventListener();
+
+  }
 
 
   setUpBookmarkBar();
@@ -557,6 +612,14 @@ function addBookMarkFolder() {
 
   addLinks(sampleListObj);
 
+  updateFolderDisplay();
+
+    if(sampleListObj.length != 1) {
+  
+    removeBookMarkEventListener();
+
+  }
+
   
   removeBookMarkEventListener();
 
@@ -567,6 +630,34 @@ function addBookMarkFolder() {
   div.style.display = "none";
 
 
+
+}
+
+
+function updateFolderDisplay() {
+
+    //get object via get request
+  
+
+    newObject = sampleListObj;
+
+    var display = document.getElementsByClassName('BookMarkFolderView');
+    
+
+    console.log(display[0]);
+
+    var htmlString = "";
+
+
+    for (let i = 0; i < sampleListObj.length; i++) {
+      if (sampleListObj[i].type == "Folder") {
+        htmlString = htmlString + "<option value=\"" + sampleListObj[i].id + "\">" + sampleListObj[i].name  +  "</option>\n";
+      }
+  }
+
+
+  display[0].innerHTML = htmlString;
+  display[1].innerHTML = htmlString;
 
 }
 
