@@ -47,11 +47,10 @@ if(elements.length > 0){
 
 
 //Functions
-const options = {mode:'no-cors', method:'GET'};
 //main Activitiy all onload activities
 async function mainActivity() {
 let requestURL = "https://bookmarkdb.cloudant.com/bookmarks/c5926a8bdcc095a139c176dbea00b09d";
-let request = new Request(requestURL, options);
+let request = new Request(requestURL);
 
 let response = await fetch(requestURL);
 let bookmarkbar = await response.json();
