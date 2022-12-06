@@ -42,9 +42,9 @@ if(elements.length > 0){
 
 async function mainActivity() {
 
-  const express = require("express");
-  const cors = require("cors");
-  const app = express();
+  const express = require(["express"]);
+  const cors = require(["cors"]);
+  const app = express([]);
  
   app.use(
     cors({
