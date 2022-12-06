@@ -88,11 +88,6 @@ async function mainActivity() {
   setUpBBBBEditBox();
   updateFolderDisplay();
 
-async function mainActivity() {;
- 
-    await addLinks(sampleListObj);
-    setUpBookmarkBar();
-    setUpBBBBEditBox();
 }
 
 function addLinks(bookmarks) {
@@ -805,12 +800,4 @@ function updateFolderDisplay() {
     display[1].innerHTML = htmlString;
   }
 
-}
-
-
-
-
-
-
-
-
+  }
