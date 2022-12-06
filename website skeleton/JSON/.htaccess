@@ -1,3 +1,0 @@
-<Files "bookmark.json">
-  Header set Access-Control-Allow-Origin "*"
-</Files>
