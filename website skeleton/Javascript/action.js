@@ -42,16 +42,16 @@ if(elements.length > 0){
 
 async function mainActivity() {
 
-  // const express = require("express");
-  // const cors = require("cors");
-  // const app = express();
+  const express = require("express");
+  const cors = require("cors");
+  const app = express();
  
-  // app.use(
-  //   cors({
-  //     origin: "*"
-  //   })
-  // );
-  
+  app.use(
+    cors({
+      origin: "*"
+    })
+  );
+
 
   let requestURL = "https://bookmarkdb.cloudant.com/bookmarks/c5926a8bdcc095a139c176dbea00b09d";
   let request = new Request(requestURL);
