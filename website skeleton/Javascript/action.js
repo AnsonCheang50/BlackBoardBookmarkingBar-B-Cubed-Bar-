@@ -1,54 +1,11 @@
 //imports
-//import { BookmarkBar } from './Javascript/BookmarkBar.js' 
-
-
-// sample data
-let sampleListObj = [{
-   type : "Bookmark",
-   obj : {
-      link : "../HTML/classexample.html",
-      name : "My Class",
-      id : "asdf"
-   }
-}, {
-   type : "Bookmark",
-   obj : {
-      link : "../HTML/assignmentexample.html",
-      name : "My Assignment",
-      id : "dfg"
-   }
-
-}, {
-   name : "Class Folder",
-   type : "Folder",
-   id : "0",
-   obj : 
-      [{
-        type : "Bookmark",
-        obj : {
-           link : "../HTML/assignmentexample.html",
-           name : "Assignment1",
-           id : "qwe"
-        }
-     
-     },
-     {
-      type : "Bookmark",
-      obj : {
-         link : "../HTML/assignmentexample.html",
-         name : "Assignment2",
-         id : "dfewqeg"
-      }
-   
-   }]
-}]
+//import { BookmarkBar } from './Javascript/BookmarkBar.js'
+//cloud username: bookmarkdb
+//cloud password: blackboardbookmarkbar
 
 //window Listeners
-window.onload = function () { mainActivity() };
+window.onload = async function () { mainActivity() };
 window.onscroll = function() { barScroll() };
-
-
-
 
 // Get the navbar pos and element
 var navbar = document.getElementById("bookmarkbar");
@@ -57,10 +14,6 @@ var sticky = navbar.offsetTop;
 //Get Ribbon elements
 let clickedId;
 var elements = document.getElementsByClassName("ribbon");
-
-
-
-
 
 
 //Listeners
@@ -84,18 +37,30 @@ if(elements.length > 0){
 
 //-------------------------Edit Box Listeners------------------------------
 
-
-
-
-
 //Functions
 //main Activitiy all onload activities
+const express = require("express");
+const cors = require("cors");
+const app = express();
+
 async function mainActivity() {
+  
+  app.use(
+    cors({
+      origin: "https://bookmarkdb.cloudant.com/bookmarks/c5926a8bdcc095a139c176dbea00b09d"
+    })
+  );
 
-  await addLinks(sampleListObj);
-  setUpBookmarkBar();
-  setUpBBBBEditBox();
+  let requestURL = "https://bookmarkdb.cloudant.com/bookmarks/c5926a8bdcc095a139c176dbea00b09d";
+  let request = new Request(requestURL);
 
+  let response = await fetch(requestURL);
+  let bookmarkbar = await response.json();
+
+  console.log(bookmarkbar); 
+    await addLinks(bookmarkbar[sampleUserObj]);
+    setUpBookmarkBar();
+    setUpBBBBEditBox();
 }
 
 function addLinks(bookmarks) {
