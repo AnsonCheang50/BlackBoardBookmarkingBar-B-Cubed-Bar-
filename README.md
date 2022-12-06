@@ -1,4 +1,4 @@
-Authors: Shane Calla, Seattle Bourassa, Arthur Rosa, Anson Cheang, Jayeandra Rathore
+Authors: Shane Calla, Seattle Bourassa, Arthur Rosa, Anson Cheang, Jayendra Rathore
 
 
 
