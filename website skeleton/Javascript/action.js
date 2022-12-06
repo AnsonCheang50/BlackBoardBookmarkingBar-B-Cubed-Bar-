@@ -7,9 +7,6 @@
 window.onload = async function () { mainActivity() };
 window.onscroll = function() { barScroll() };
 
-
-
-
 // Get the navbar pos and element
 var navbar = document.getElementById("bookmarkbar");
 var sticky = navbar.offsetTop;
@@ -17,10 +14,6 @@ var sticky = navbar.offsetTop;
 //Get Ribbon elements
 let clickedId;
 var elements = document.getElementsByClassName("ribbon");
-
-
-
-
 
 
 //Listeners
