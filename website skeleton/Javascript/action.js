@@ -46,11 +46,8 @@ let sampleListObj = [{
 }]
 
 //window Listeners
-window.onload = function () { mainActivity() };
+window.onload = async function () { mainActivity() };
 window.onscroll = function() { barScroll() };
-
-
-
 
 // Get the navbar pos and element
 var navbar = document.getElementById("bookmarkbar");
@@ -59,10 +56,6 @@ var sticky = navbar.offsetTop;
 //Get Ribbon elements
 let clickedId;
 var elements = document.getElementsByClassName("ribbon");
-
-
-
-
 
 
 //Listeners
@@ -86,10 +79,6 @@ if(elements.length > 0){
 
 //-------------------------Edit Box Listeners------------------------------
 
-
-
-
-
 //Functions
 //main Activitiy all onload activities
 async function mainActivity() {
@@ -99,6 +88,11 @@ async function mainActivity() {
   setUpBBBBEditBox();
   updateFolderDisplay();
 
+async function mainActivity() {;
+ 
+    await addLinks(sampleListObj);
+    setUpBookmarkBar();
+    setUpBBBBEditBox();
 }
 
 function addLinks(bookmarks) {
@@ -109,11 +103,13 @@ function addLinks(bookmarks) {
     }
     else if (bookmarks[i].type == "Folder") {
       
+      htmlString = htmlString + "<div class = \"aligneverything\">";
       htmlString = htmlString + "<div onclick=\"folderDropdown("+ bookmarks[i].id +")\" class=\"bookmarkFolder bookMarkItems\" id=\"" + "a" + bookmarks[i].id + "\">" + bookmarks[i].name + "</div>\n";
       htmlString = htmlString + "<div class=\"folderDDItem\" id=\"" + bookmarks[i].id + "\">\n";
       for (var j = 0; j < bookmarks[i].obj.length; j++) {
         htmlString = htmlString + "<a class=\"folderItem bookMarkItems\" id=\"" + bookmarks[i].obj[j].obj.id + "\" href=\"" +  bookmarks[i].obj[j].obj.link + "\">" + bookmarks[i].obj[j].obj.name + "</a>\n";
       }
+      htmlString = htmlString + "</div>";
       htmlString = htmlString + "</div>";
     }
 
@@ -128,9 +124,7 @@ function folderDropdown(folderID) {
   let folder = document.getElementById(folderID);
   console.log(folder);
 
-  if(document.getElementById(folderID) != null) {
     document.getElementById(folderID).classList.toggle("show");
-  }
 }
 
 //Access bookmark object and remove the clicked one
