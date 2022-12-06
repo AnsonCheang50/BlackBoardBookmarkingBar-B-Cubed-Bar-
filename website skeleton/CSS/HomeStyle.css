@@ -54,6 +54,7 @@ hr {
 .dropbtn:hover, .dropbtn:focus {
     background-color: rgb(97, 97, 97);
 }
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -294,4 +295,3 @@ div.class{
 #course-homepage {
     list-style: none;
 }*/
-
