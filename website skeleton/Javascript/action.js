@@ -101,7 +101,7 @@ async function mainActivity() {
 
 function addLinks(bookmarks) {
   var htmlString = "";
-  for (let i = 0; i < bookmarks.length; i++) {
+  for (var i = 0; i < bookmarks.length; i++) {
     if (bookmarks[i].type == "Bookmark") {
       htmlString = htmlString + "<a href=\"" + bookmarks[i].obj.link + "\" class=\"bookmarkOnBar bookMarkItems\" id=\"" + bookmarks[i].obj.id + "\">" + bookmarks[i].obj.name + "</a>\n";
     }
@@ -109,8 +109,8 @@ function addLinks(bookmarks) {
       
       htmlString = htmlString + "<div onclick=\"folderDropdown("+ bookmarks[i].id +")\" class=\"bookmarkFolder bookMarkItems\" id=\"" + bookmarks[i].id + "\">" + bookmarks[i].name + "</div>\n";
       htmlString = htmlString + "<div class=\"folderDDItem\" id=\"" + bookmarks[i].id + "\">\n";
-      for (let j = 0; j < bookmarks[i].obj.length; j++) {
-        htmlString = htmlString + "<a class=\"folderItem bookMarkItems\" id=\"" + bookmarks[i].obj[j].obj.id + "\" href=\"" +  bookmarks[i]. obj[j].obj.link + "\">" + bookmarks[i].obj[j].obj.name + "</a>\n";
+      for (var j = 0; j < bookmarks[i].obj.length; j++) {
+        htmlString = htmlString + "<a class=\"folderItem bookMarkItems\" id=\"" + bookmarks[i].obj[j].obj.id + "\" href=\"" +  bookmarks[i].obj[j].obj.link + "\">" + bookmarks[i].obj[j].obj.name + "</a>\n";
       }
       htmlString = htmlString + "</div>";
     }
@@ -124,7 +124,7 @@ function addLinks(bookmarks) {
 
 function folderDropdown(folderID) {
   let folder = document.getElementById(folderID);
-  console.log(folderID);
+  console.log(folder);
 
   if(document.getElementById(folderID) != null) {
     document.getElementById(folderID).classList.toggle("show");
