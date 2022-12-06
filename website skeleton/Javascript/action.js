@@ -51,6 +51,7 @@ async function mainActivity() {
   //     origin: "*"
   //   })
   // );
+  
 
   let requestURL = "https://bookmarkdb.cloudant.com/bookmarks/c5926a8bdcc095a139c176dbea00b09d";
   let request = new Request(requestURL);
