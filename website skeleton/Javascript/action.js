@@ -2,6 +2,46 @@
 //import { BookmarkBar } from './Javascript/BookmarkBar.js'
 //cloud username: bookmarkdb
 //cloud password: blackboardbookmarkbar
+let sampleListObj = [{
+  type : "Bookmark",
+  obj : {
+     link : "../HTML/classexample.html",
+     name : "My Class",
+     id : "asdf"
+  }
+},
+{
+  type : "Bookmark",
+  obj : {
+     link : "../HTML/assignmentexample.html",
+     name : "My Assignment",
+     id : "dfg"
+  }
+
+}, {
+  name : "Class Folder",
+  type : "Folder",
+  id : "0",
+  obj : 
+     [{
+       type : "Bookmark",
+       obj : {
+          link : "../HTML/assignmentexample.html",
+          name : "Assignment1",
+          id : "qwe"
+       }
+    
+    },
+    {
+     type : "Bookmark",
+     obj : {
+        link : "../HTML/assignmentexample.html",
+        name : "Assignment2",
+        id : "dfewqeg"
+     }
+  
+  }]
+}]
 
 //window Listeners
 window.onload = async function () { mainActivity() };
@@ -40,27 +80,9 @@ if(elements.length > 0){
 //Functions
 //main Activitiy all onload activities
 
-async function mainActivity() {
-
-  const express = require(["express"]);
-  const cors = require(["cors"]);
-  const app = express([]);
+async function mainActivity() {;
  
-  app.use(
-    cors({
-      origin: "*"
-    })
-  );
-
-
-  let requestURL = "https://bookmarkdb.cloudant.com/bookmarks/c5926a8bdcc095a139c176dbea00b09d";
-  let request = new Request(requestURL);
-
-  let response = await fetch(requestURL);
-  let bookmarkbar = await response.json();
-
-  console.log(bookmarkbar); 
-    await addLinks(bookmarkbar[sampleUserObj]);
+    await addLinks(sampleListObj);
     setUpBookmarkBar();
     setUpBBBBEditBox();
 }
