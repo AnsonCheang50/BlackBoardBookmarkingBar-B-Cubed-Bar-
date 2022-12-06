@@ -93,8 +93,8 @@ div.top-navigation {
 }
 
 .aligneverything{
-    position: absolute;
-    display: inline-block;
+  float: left;
+  overflow: hidden;
 }
 
 .folderDDItem {
