@@ -291,12 +291,14 @@ div.cent {
 }
 
 
-#BookMarkFolderView {
+.BookMarkFolderView {
     display: block;
     border: lightGray 1px solid;
     padding:0px;
     width:150px; 
 }
+
+
 
 div.FolderView {
     list-style-type: none;
