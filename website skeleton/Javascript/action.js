@@ -447,20 +447,6 @@ function myFunction() {
 
 
 function removeButtonFunction(clickedId) {
-    //get object via get request
-    // for(var i = 0; i < sampleListObj.length; i++) {
-    //   if (sampleListObj[i].type == "Bookmark") {
-    //     if (sampleListObj[i].obj.id == clickedId) {
-    //       sampleListObj.splice(i, 1);
-    //       break;
-    //     }
-    //   }
-    // }
-
-    // console.log(clickedId);
-
-    // sampleListObj[index.key1].obj.splice(index.key2, 1);
-
 
 
     var test = document.getElementById(clickedId);
@@ -685,21 +671,16 @@ function BBBBdoneButtonFunction(BookMarkId) {
 
   bookmark.innerHTML = nameBox.value;
 
-  var found = findBookMark(BookMarkId);
+  findBookMark(BookMarkId, nameBox.value);
 
+  // found.name = nameBox.value;
 
-
-  console.log(found);
-
-
-  found.name = nameBox.value;
+  // console.log(found);
 
 
   if(bookmark.classList[0] == "bookmarkFolder") {
-
-
     updateFolderDisplay();
-
+    
   }
 
   div = document.getElementById('BBBBeditBoxContainer');
@@ -708,7 +689,7 @@ function BBBBdoneButtonFunction(BookMarkId) {
 }
 
 
-function findBookMark(BookMarkId) { 
+function findBookMark(BookMarkId, value) { 
 
     //get object via get request   // maybe you need this idk - Arthur
 
@@ -725,22 +706,25 @@ function findBookMark(BookMarkId) {
       if(newObject[i].type == "Folder") {
         console.log(newObject[i].id);
         if( "a" + newObject[i].id == BookMarkId ) {
-          return newObject[i];
+          
+           newObject[i].name = value;
         }
         for (var j = 0; j < newObject[i].obj.length; j++) {
           if(newObject[i].obj[j].obj.id == BookMarkId ) {
             console.log(newObject[i].obj[j]);
-            return newObject[i].obj[j].obj;
+             newObject[i].obj[j].obj.name = value;
           }
         }
       }
 
       else if(newObject[i].type == "Bookmark") {
         if(newObject[i].obj.id == BookMarkId ) {
-          return newObject[i].obj;
+           newObject[i].obj.name = value;
         }
       }
-    } 
+    }
+    
+    putObj(newObject);
 }
 
 
