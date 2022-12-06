@@ -1,28 +1,42 @@
 {
-    "sampleUserObj": [{
-        "type" : "Bookmark",
-        "obj" : {
-           "link" : "../HTML/classexample.html",
-           "name" : "My Class",
-           "id": ""
-        }
-     }, {
-        "type" : "Bookmark",
-        "obj" : {
-           "link" : "../HTML/assignmentexample.html",
-           "name" : "My Assignment",
-           "id":""
-        }
-     }, {
-        "name" : "Class Folder",
-        "type" : "Folder",
-        "obj" : 
-           [{
-              "link" : "../HTML/classexample.html",
-              "name" : "My Class"
-           }, {
-              "link" : "../HTML/classexample.html",
-              "name" : "My Class"
-           }]
-     }]
+   "let sampleListObj" : [{
+      "type" : "Bookmark",
+      "obj" : {
+         "link" : "../HTML/classexample.html",
+         "name" : "My Class",
+         "id" : "asdf"
+      }
+   },
+   {
+      "type" : "Bookmark",
+      "obj" : {
+         "link" : "../HTML/assignmentexample.html",
+         "name" : "My Assignment",
+         "id" : "dfg"
+      }
+   
+   }, {
+      "name" : "Class Folder",
+      "type" : "Folder",
+      "id" : "0",
+      "obj" : 
+         [{
+           "type" : "Bookmark",
+           "obj" : {
+              "link" : "../HTML/assignmentexample.html",
+              "name" : "Assignment1",
+              "id" : "qwe"
+           }
+        
+        },
+        {
+         "type" : "Bookmark",
+         "obj" : {
+            "link" : "../HTML/assignmentexample.html",
+            "name" : "Assignment2",
+            "id" : "dfewqeg"
+         }
+      
+      }]
+   }]
 }
