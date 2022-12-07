@@ -63,6 +63,73 @@ div.bookmarkbar{
     border: 1px solid black;
 }
 
+#editBoxContainer {
+    display: none;
+    z-index: 2;
+    background-color: wheat;   
+}
+
+
+#BBBBeditBoxContainer {
+    display: none;
+    z-index: 2;
+    background-color: wheat;
+}
+
+
+
+div.cent {
+    position:absolute;
+    top:125%;
+    left:50%;
+    margin-top:-50px; /* this is half the height of your div*/  
+    margin-left:-100px; /*this is half of width of your div*/
+  }
+
+  #content {
+    display: inline-block;
+    border: lightGray 1px solid;
+    text-align: left;
+}
+
+.BookMarkFolderView {
+    display: block;
+    border: lightGray 1px solid;
+    padding:0px;
+    width:150px; 
+}
+
+div.FolderView {
+    list-style-type: none;
+
+}
+
+
+#BBBBdoneBox {
+    display: inline-block;
+    border: lightGray 1px solid;
+    background-color: lightblue;
+}
+
+#BBBBremoveBox {
+    display: inline-block;
+    border: lightGray 1px solid;
+    background-color: lightpink;
+}
+
+#newFolderBox {
+    display: inline-block;
+    border: lightGray 1px solid;
+    background-color: lightgreen;
+}
+
+  #hcontainer{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+  
+
 
 
 
